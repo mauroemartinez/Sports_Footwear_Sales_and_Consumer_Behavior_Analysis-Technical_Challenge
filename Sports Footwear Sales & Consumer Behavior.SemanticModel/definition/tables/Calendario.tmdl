@@ -1,0 +1,119 @@
+/// Tabla de fechas en DAX. Cubre años completos, del 1 de enero del primer año con ventas al 31 de diciembre del último.
+table Calendario
+	lineageTag: 2782b69f-6729-4ab0-aeb7-64707f212f12
+	dataCategory: Time
+
+	/// Año calendario.
+	column Año
+		formatString: 0
+		lineageTag: 568899b2-1e95-45fe-bb1e-a82e9641df47
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Año]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre abreviado del mes; se ordena por NroMes.
+	column Mes
+		lineageTag: 5302c295-7ede-4057-963d-aa1603be8571
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes]
+		sortByColumn: NroMes
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Número de mes (1–12). Columna de orden de Mes.
+	column NroMes
+		isHidden
+		formatString: 0
+		lineageTag: f47cf154-c19c-4d32-8372-67db518e86ec
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [NroMes]
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Primer día del mes. Identifica cada mes de forma única entre años.
+	column 'Inicio Mes'
+		isHidden
+		formatString: dd/mm/yyyy
+		lineageTag: 4b8e2f6d-1c7a-4e93-a5d0-8f3b6c2e9d14
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Inicio Mes]
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Día del mes.
+	column Día
+		formatString: 0
+		lineageTag: 7687ff30-6b9c-48e0-b054-3409deab2c1b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Día]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Nombre del día de la semana; se ordena por Día Semana Nro.
+	column 'Día semana'
+		lineageTag: 73ea1412-9d2b-4ec5-b0ee-db87ea62c2dc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Día semana]
+		sortByColumn: 'Día Semana Nro'
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Fecha. Clave de la tabla.
+	column Fecha
+		isKey
+		formatString: dd/mm/yyyy
+		lineageTag: 072c0f6b-5ab4-4360-b06b-667306670521
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Fecha]
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Número de día de la semana (domingo = 1). Columna de orden de Día semana.
+	column 'Día Semana Nro'
+		isHidden
+		formatString: 0
+		lineageTag: 5f7fca16-deec-47cf-9e1e-f6a2d7b39899
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Día Semana Nro]
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendario = calculated
+		mode: import
+		source =
+				VAR PrimerAnio = YEAR(MIN(Fact_Dataframe[Fecha]))
+				VAR UltimoAnio = YEAR(MAX(Fact_Dataframe[Fecha]))
+				VAR Fechas =
+				    SELECTCOLUMNS(
+				        CALENDAR(DATE(PrimerAnio, 1, 1), DATE(UltimoAnio, 12, 31)),
+				        "Fecha", [Date]
+				    )
+				RETURN
+				    ADDCOLUMNS(
+				        Fechas,
+				        "Año", YEAR([Fecha]),
+				        "Mes", LEFT(FORMAT([Fecha], "MMMM"), 3),
+				        "NroMes", MONTH([Fecha]),
+				        "Inicio Mes", DATE(YEAR([Fecha]), MONTH([Fecha]), 1),
+				        "Día", DAY([Fecha]),
+				        "Día semana", FORMAT([Fecha], "DDDD"),
+				        "Día Semana Nro", WEEKDAY([Fecha], 1)
+				    )
+
+	annotation PBI_Id = 569b502628184af0afa944ab5f58a462
+

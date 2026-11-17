@@ -1,0 +1,51 @@
+model Model
+	culture: es-AR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-UY
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup Parámetros
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup Funciones
+
+	annotation PBI_QueryGroupOrder = 1
+
+queryGroup Transformación
+
+	annotation PBI_QueryGroupOrder = 2
+
+queryGroup Dimensiones
+
+	annotation PBI_QueryGroupOrder = 3
+
+queryGroup Hechos
+
+	annotation PBI_QueryGroupOrder = 4
+
+queryGroup Medidas
+
+	annotation PBI_QueryGroupOrder = 5
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["OrigenDatos","fnCrearDimension","Ventas_Origen","Dim_Marcas","Dim_Categoría","Canales de Venta","Dim_Métodos de Pago","Dim_Países","Fact_Dataframe","Medidas"]
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop"]
+
+ref table Fact_Dataframe
+ref table Calendario
+ref table Medidas
+ref table Categorías
+ref table Métrica
+ref table Dim_Marcas
+ref table Dim_Categoría
+ref table 'Canales de Venta'
+ref table 'Dim_Métodos de Pago'
+ref table Dim_Países
+
+ref cultureInfo es-AR
+

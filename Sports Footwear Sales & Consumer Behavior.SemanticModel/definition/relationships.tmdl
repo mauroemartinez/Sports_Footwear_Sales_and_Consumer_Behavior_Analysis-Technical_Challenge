@@ -1,0 +1,24 @@
+relationship fe3f9d7e-20a6-0984-162e-f02fa81e3fac
+	fromColumn: Fact_Dataframe.Fecha
+	toColumn: Calendario.Fecha
+
+relationship AutoDetected_9858f246-db7b-498a-b4b2-bd21782a8d2a
+	fromColumn: Fact_Dataframe.'Índice Marcas'
+	toColumn: Dim_Marcas.'Índice Marcas'
+
+relationship AutoDetected_1685eb76-ed5d-4882-8c54-2df2f8237a9b
+	fromColumn: Fact_Dataframe.'Índice Categorías'
+	toColumn: Dim_Categoría.'Índice Categorías'
+
+relationship AutoDetected_80f52bf0-667b-4562-84b1-a73377540c80
+	fromColumn: Fact_Dataframe.'Índice Canales de Venta'
+	toColumn: 'Canales de Venta'.'Índice Canales de Venta'
+
+relationship AutoDetected_0dc8db49-678a-4c5c-9039-9bb8c2ee6305
+	fromColumn: Fact_Dataframe.'Índice Métodos de Pago'
+	toColumn: 'Dim_Métodos de Pago'.'Índice Métodos de Pago'
+
+relationship AutoDetected_30a7a9ae-ea64-41aa-b1e9-b9a53c04c212
+	fromColumn: Fact_Dataframe.'Índice País'
+	toColumn: Dim_Países.'Índice País'
+

@@ -1,0 +1,33 @@
+/// Métodos de pago usados en las órdenes.
+table 'Dim_Métodos de Pago'
+	lineageTag: 45b24aa9-6208-4f2a-b7ce-924850c5f02e
+
+	/// Clave sustituta generada en Power Query.
+	column 'Índice Métodos de Pago'
+		isHidden
+		dataType: int64
+		formatString: 0
+		lineageTag: b3a6d2ef-3fe2-49e1-a247-37e17609afa3
+		summarizeBy: none
+		sourceColumn: Índice Métodos de Pago
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Método de pago.
+	column 'Método de Pago'
+		dataType: string
+		lineageTag: 097a2248-abde-4ce6-9682-208e1f53681e
+		summarizeBy: none
+		sourceColumn: Método de Pago
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dim_Métodos de Pago' = m
+		mode: import
+		queryGroup: Dimensiones
+		source = fnCrearDimension(Ventas_Origen, "Método de Pago", "Índice Métodos de Pago")
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

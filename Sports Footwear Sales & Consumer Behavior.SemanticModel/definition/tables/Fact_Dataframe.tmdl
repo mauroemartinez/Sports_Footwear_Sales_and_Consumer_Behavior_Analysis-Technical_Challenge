@@ -1,0 +1,255 @@
+/// Tabla de hechos: una fila por orden de venta (30.000 órdenes, 2018–2026).
+table Fact_Dataframe
+	lineageTag: 7fbd7cb9-26b1-47a9-a34f-6391e6026281
+
+	/// Identificador único de la orden.
+	column 'ID Orden'
+		dataType: string
+		lineageTag: 6c099c24-7734-4e6f-a9e5-9b4954b62146
+		summarizeBy: none
+		sourceColumn: ID Orden
+
+		annotation SummarizationSetBy = User
+
+	/// Fecha de la orden. Se relaciona con Calendario[Fecha]; usar Calendario en los visuales.
+	column Fecha
+		dataType: dateTime
+		isHidden
+		formatString: dd/mm/yyyy
+		lineageTag: 1bd729a5-e21c-4318-95bd-a81914077430
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Número de modelo (sin el prefijo "Model-").
+	column Modelo
+		dataType: int64
+		formatString: 0
+		lineageTag: 4d3979c4-1750-46ec-b520-b25b648f4abf
+		summarizeBy: none
+		sourceColumn: Modelo
+
+		annotation SummarizationSetBy = User
+
+	/// Género del producto: Masculino, Femenino o Unisex.
+	column Género
+		dataType: string
+		lineageTag: b38149e5-184f-4ae3-84ef-10d72ec66991
+		summarizeBy: none
+		sourceColumn: Género
+
+		annotation SummarizationSetBy = User
+
+	/// Talle del calzado.
+	column Talle
+		dataType: int64
+		formatString: 0
+		lineageTag: a26127c9-c06c-4ac6-9d84-5c7f69aea518
+		summarizeBy: none
+		sourceColumn: Talle
+
+		annotation SummarizationSetBy = User
+
+	/// Color del producto.
+	column Color
+		dataType: string
+		lineageTag: 1013e76b-11a1-4f61-a9c5-567a75fd44d5
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = User
+
+	/// Precio de lista unitario antes del descuento, en USD.
+	column 'Precio Base USD'
+		dataType: int64
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 61218af7-6baf-464f-b417-104141bbab7a
+		summarizeBy: none
+		sourceColumn: Precio Base USD
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Descuento aplicado sobre el precio base.
+	column '% Descuento'
+		dataType: double
+		formatString: 0%;-0%;0%
+		lineageTag: 96231f91-b0eb-4665-b5eb-14431e8541b5
+		summarizeBy: none
+		sourceColumn: % Descuento
+
+		annotation SummarizationSetBy = User
+
+	/// Precio unitario después del descuento, en USD.
+	column 'Precio Final USD'
+		dataType: decimal
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 699e25e0-cf6c-4dd3-9ea7-3a067d4b1520
+		summarizeBy: none
+		sourceColumn: Precio Final USD
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Unidades vendidas en la orden. Usar la medida [Unidades Vendidas].
+	column 'Unidades Vendidas'
+		dataType: int64
+		isHidden
+		formatString: #,0
+		lineageTag: 41d0097d-113c-4ddf-bf96-f912e0561ac3
+		summarizeBy: sum
+		sourceColumn: Unidades Vendidas
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Ingresos de la orden en USD (precio final × unidades). Usar la medida [Ingresos en USD].
+	column 'Ingresos en USD'
+		dataType: decimal
+		isHidden
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: b6579fe9-f36e-44c6-8f46-073ca9f0492c
+		summarizeBy: sum
+		sourceColumn: Ingresos en USD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Nivel de ingresos del cliente: Bajo, Medio o Alto.
+	column 'Nivel de Ingresos del Cliente'
+		dataType: string
+		lineageTag: e3779253-4270-43e2-a7cf-0ed022fed309
+		summarizeBy: none
+		sourceColumn: Nivel de Ingresos del Cliente
+
+		annotation SummarizationSetBy = User
+
+	/// Calificación del cliente, de 3,0 a 5,0 en pasos de 0,1. Usar la medida [Promedio Calificación de Cliente] para promediar.
+	column 'Calificación del Cliente'
+		dataType: double
+		formatString: 0.0
+		lineageTag: a725cf68-c20a-4b37-a9e5-cf1d422a01b7
+		summarizeBy: none
+		sourceColumn: Calificación del Cliente
+
+		annotation SummarizationSetBy = User
+
+	/// Banda de satisfacción: Muy mala (< 3,5), Mala (3,5 a < 4), Buena (4 a < 4,5), Muy buena (≥ 4,5).
+	column 'Categoría Calificación' =
+			VAR Calificacion = Fact_Dataframe[Calificación del Cliente]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        Calificacion < 3.5, "Muy mala",
+			        Calificacion < 4, "Mala",
+			        Calificacion < 4.5, "Buena",
+			        "Muy buena"
+			    )
+		lineageTag: 5502f24e-b824-4ca2-bb04-c0bde18d7b88
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Índice Marcas'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a7e5f4ff-4c5b-4e83-ba9f-121c8e9dd2a6
+		summarizeBy: none
+		sourceColumn: Índice Marcas
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Índice Categorías'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a8db9406-3f93-4c66-a1a8-6966404a1e20
+		summarizeBy: none
+		sourceColumn: Índice Categorías
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Índice Canales de Venta'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 815a650d-a9f2-4e53-af34-0961e2bedeb8
+		summarizeBy: none
+		sourceColumn: Índice Canales de Venta
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Índice Métodos de Pago'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6d1e3053-9142-4f24-b38e-6913ef21b11a
+		summarizeBy: none
+		sourceColumn: Índice Métodos de Pago
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Índice País'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 915d9058-4e34-4995-bd6a-a6bf696c6cb7
+		summarizeBy: none
+		sourceColumn: Índice País
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_Dataframe = m
+		mode: import
+		queryGroup: Hechos
+		source =
+				let
+				    // Reemplaza cada atributo descriptivo por la clave de su dimensión
+				    Dimensiones = {
+				        {Dim_Marcas, "Marca", "Índice Marcas"},
+				        {Dim_Categoría, "Categoría", "Índice Categorías"},
+				        {#"Canales de Venta", "Canal de Venta", "Índice Canales de Venta"},
+				        {#"Dim_Métodos de Pago", "Método de Pago", "Índice Métodos de Pago"},
+				        {Dim_Países, "País", "Índice País"}
+				    },
+				    ConClaves = List.Accumulate(
+				        Dimensiones,
+				        Ventas_Origen,
+				        (tabla, dimension) =>
+				            Table.ExpandTableColumn(
+				                Table.NestedJoin(tabla, {dimension{1}}, dimension{0}, {dimension{1}}, "Dimension", JoinKind.LeftOuter),
+				                "Dimension",
+				                {dimension{2}}
+				            )
+				    ),
+				    TiposClaves = Table.TransformColumnTypes(ConClaves, List.Transform(Dimensiones, each {_{2}, Int64.Type})),
+				    SinAtributos = Table.RemoveColumns(TiposClaves, List.Transform(Dimensiones, each _{1}))
+				in
+				    SinAtributos
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

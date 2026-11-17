@@ -1,39 +1,89 @@
-# 👟 Sports Footwear Sales & Consumer Behavior Analysis
+# Sports Footwear Sales and Consumer Behavior Analysis
 
-### [📊 View Dashboard Preview (GIF)](https://raw.githubusercontent.com/mauroemartinez/Sports_Footwear_Sales_and_Consumer_Behavior_Analysis-Technical_Challenge/main/Other%20Files/Preview.gif)
-**Context:** Technical challenge for a BI Developer / Analytics Engineer position. This project demonstrates the integration of Python for data ingestion and advanced DAX for trend analysis.
+A Power BI analysis of sports footwear sales across six countries from 2018 to 2026. The report compares revenue by country, brand, category, and customer segment, tracks year-over-year and monthly trends, and shows how customers rate their purchases. It was built as a technical challenge for a BI Developer / Analytics Engineer role.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/mauroemartinez/Sports_Footwear_Sales_and_Consumer_Behavior_Analysis-Technical_Challenge/main/Other%20Files/Preview.gif" alt="Sports Footwear Dashboard Demo" width=85%>
-</p>
+## Dashboard
 
-**Stack:** ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black) ![Power Query](https://img.shields.io/badge/Power_Query-217346?style=flat-square&logo=powerbi&logoColor=white) ![DAX](https://img.shields.io/badge/DAX-0176D3?style=flat-square&logo=microsoft&logoColor=white) ![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=flat-square&logo=Kaggle&logoColor=white)
+![Overview page](Images/overview.png)
 
-## 📋 Executive Summary
-This end-to-end BI solution analyzes global sales and consumer sentiment for the sports footwear industry. Using a dataset of ~900 models, the report identifies key drivers in revenue, customer satisfaction, and inventory needs across different global markets.
+![Time Intelligence page](Images/time-intelligence.png)
 
-## ⚙️ Engineering & Technical Decisions
-* **Automated Ingestion (`Python`):** Instead of static file loading, I implemented a Python script to fetch data directly from Kaggle. This ensures data integrity and allows for quarterly updates without manual downloads.
-* **ETL & Dimensional Modeling (`Power Query`):** I performed the complete ETL process to transform a raw, flat dataset into a functional **Star Schema**. This involved normalizing dimensions (Products, Geography, Categories) to optimize cross-filtering performance and maintain data integrity.
-* **Controlled Calendar Table:** Avoided `CALENDARAUTO()` to prevent file bloat and regain control over granularity. Built a custom `DAX Calendar` to manage 1:N relationships efficiently.
-* **Advanced Time Intelligence:** Opted for a **3-Month Moving Average** over YTD to expose real seasonality peaks (Sept/Oct) by filtering out historical "noise".
-* 
-## 🧠 Strategic Business Insights
-* **Revenue vs. Volume:** Germany leads in revenue despite lower sales volume compared to the USA and India, indicating a higher-margin market preference.
-* **Market Diversification:** The Top 3 models represent less than 1% of total sales, showing a healthy, well-diversified portfolio across 899 models.
-* **Satisfaction Segmentation:** 52% of customers rate their experience as "Good" or "Very Good." A critical insight: **Unisex products** flag a potential design or fit issue due to higher "Poor" ratings.
-* **Customer Demographics:** Low-income segments contribute significantly (~$50M), proving strong brand penetration in mass-market tiers.
+## Key findings
 
-## 🎨 User Experience & Analytics Versatility
-* **Dynamic Parameters:** Implemented Field Parameters for Metrics and Categories, allowing the "Overview" page to answer hundreds of questions within a single visual. You can make it only visible for the developers, so that they can go further in their analysis.
-* **Insight-Driven Navigation:** Used Bookmarks to create a focused storytelling experience, preventing cognitive overload. It is intended for non-technical users, while technical ones can use the dynamic parameters.
+The dataset has 30,000 orders, 75,006 units, and USD 9.08M in revenue, an average of USD 302.71 per order.
 
-## 🏗️ Data Model
-The architecture follows a clean Star Schema, optimized through Power Query for efficient relationship management and calculation speed.
+- **Revenue is spread evenly across countries.** The UAE leads with USD 1.55M and Pakistan is lowest with USD 1.47M, a 5.5% gap. Countries rank in the same order by revenue as by units sold, so no market pays noticeably higher prices.
+- **ASICS is the top brand by revenue** at USD 1.56M, 2.4% ahead of Nike. Adidas has the lowest revenue (USD 1.49M) and the lowest average rating, though only slightly (3.99 against 4.00 overall).
+- **Discounts don't increase basket size.** Orders average about 2.5 units at every discount level from 0% to 30%. Because each discount level has a similar number of orders, revenue falls from USD 1.72M at 0% to USD 1.23M at 30%.
+- **Sales don't depend on a few products.** The three highest-revenue models (863, 855, and 604) make up 0.56% of revenue across 899 models.
+- **52.7% of orders are rated Good or Very Good**, and 22.6% are rated Very Poor. The average rating is 4.00 and barely changes by brand, category, or gender (3.99 to 4.01).
+- **Each customer income level brings in about a third of revenue.** Online and retail store orders are split almost evenly.
+- **Annual revenue is stable** at USD 0.97M to 1.03M, with year-over-year changes between −5.4% (2024) and +5.6% (2025). There is no repeating seasonal peak: the best month changes every year.
 
-<p align="center">
-  <img src="https://github.com/mauroemartinez/Sports_Footwear_Sales_and_Consumer_Behavior_Analysis-Technical_Challenge/blob/main/Other%20Files/Data%20Model.png" alt="Sports Footwear Data Model" width=90%>
-</p>
+The dataset is described by its author as realistic data, but it includes orders dated through December 2026, after its January 2026 publication date, so at least part of it is simulated. Its distributions are close to uniform, which is why the gaps between segments are small. The findings describe this dataset, not a real market.
 
----
-**Focus:** Analytics Engineering | Data Modeling | Consumer Insights
+## Data source
+
+[Sports Footwear Sales & Consumer Behavior](https://www.kaggle.com/datasets/aliiihussain/sports-footwear-sales-and-consumer-behavior) by Ali Hussain on Kaggle, released under CC0: Public Domain. The repository includes a copy of the CSV (version 1) in `Data/`, and `scripts/download_dataset.py` downloads it again from Kaggle.
+
+## Method
+
+**Power Query.** One staging query, `Ventas_Origen`, reads the CSV, sets explicit types, renames columns to Spanish, and translates values. Every other table builds on it, so all the cleaning lives in one place.
+
+- **Locale-independent parsing.** Types are set with the `en-US` culture, so decimal points are read correctly on any regional setting.
+- **Shared dimension function.** A reusable function, `fnCrearDimension`, builds each dimension with a surrogate key.
+- **Query groups.** Queries are grouped into Parameters, Functions, Transformation, Dimensions, Fact, and Measures.
+
+**Model.** A star schema with one order-level fact table:
+
+- **Fact and dimensions.** `Fact_Dataframe` holds 30,000 rows and joins many-to-one to five dimensions: brands, categories, sales channels, payment methods, and countries. It also joins to a DAX date table.
+- **Date table.** `Calendario` covers whole calendar years so that same-period-last-year comparisons line up. Auto date/time is turned off.
+- **Measures over columns.** All totals are measures, organized in display folders in the `Medidas` table. Keys and sort columns are hidden, and numeric attributes such as size and rating are set not to sum.
+- **Satisfaction bands.** Ratings are grouped into Very Poor (below 3.5), Poor (3.5 to under 4), Good (4 to under 4.5), and Very Good (4.5 to 5).
+
+![Data model](Images/data-model.png)
+
+**Measures.**
+
+- **Base metrics.** Revenue, units, orders, average revenue per order, and average rating.
+- **Year-over-year.** Prior-year revenue and the change against it, absolute and percentage.
+- **3-month moving average.** Monthly revenue averaged over the last three months, shown only at month level and once three full months of history exist.
+
+**Report.**
+
+- **Overview.** KPI cards and slicers, plus one column chart driven by two field parameters: `Métrica` chooses what to measure and `Categorías` chooses how to group it.
+  - **For business users.** Eight bookmark buttons open predefined views, such as revenue by country or rating distribution.
+  - **For analysts.** The parameter slicers are hidden by default; show them from the Selection pane (`Métrica` and `Categorías`) to explore any metric by any category.
+- **Time Intelligence.** Year-over-year revenue change, and monthly revenue against the 3-month moving average.
+
+The report is in Spanish. [`docs/documentacion.md`](docs/documentacion.md) covers the assumptions, queries, model, and findings in more detail.
+
+## Files
+
+- `Sports Footwear Sales & Consumer Behavior.pbip`: Power BI project. It opens the report and semantic model folders next to it.
+- `Sports Footwear Sales & Consumer Behavior.Report/`: report definition.
+- `Sports Footwear Sales & Consumer Behavior.SemanticModel/`: semantic model in TMDL, including the Power Query code and DAX measures.
+- `Data/`: source CSV.
+- `scripts/`: dataset download script and its requirements.
+- `docs/documentacion.md`: project documentation (Spanish).
+- `Images/`: report screenshots and model diagram.
+- `LICENSE`: MIT License.
+
+## Open the report
+
+1. Clone or download the repository.
+2. Open `Sports Footwear Sales & Consumer Behavior.pbip` in Power BI Desktop.
+3. Select **Refresh**. The report reads the CSV from this repository on GitHub, so no setup is needed.
+
+To work offline, go to **Transform data → Edit parameters** and set `OrigenDatos` to the full path of `Data/global_sports_footwear_sales_2018_2026.csv` on your machine.
+
+To download the dataset again from Kaggle:
+
+```bash
+pip install -r scripts/requirements.txt
+python scripts/download_dataset.py
+```
+
+## Tools
+
+Power BI Desktop, Power Query (M), DAX, and Python.

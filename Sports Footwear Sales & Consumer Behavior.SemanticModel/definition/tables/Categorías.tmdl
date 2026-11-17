@@ -1,0 +1,55 @@
+/// Parámetro de campo: categorías disponibles para el eje del gráfico de Overview.
+table Categorías
+	lineageTag: 4e1b5169-8abe-47ff-ab0b-7ce09cbdc230
+
+	column Categorías
+		lineageTag: 28ae00d7-d816-42b0-87fd-8fe5c107b10f
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Categorías Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Categorías Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Categorías Fields'
+		isHidden
+		lineageTag: 26af5b61-b26b-4f9c-b2ef-ab465a942a5a
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Categorías Order'
+
+		extendedProperty ParameterMetadata = {"version":3,"kind":2}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Categorías Order'
+		isHidden
+		formatString: 0
+		lineageTag: b5b2a763-0da5-4131-a264-ccc780c4dfec
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Categorías = calculated
+		mode: import
+		source =
+				{
+				    ("Canal de Venta", NAMEOF('Canales de Venta'[Canal de Venta]), 0),
+				    ("Categoría", NAMEOF('Dim_Categoría'[Categoría]), 1),
+				    ("Color", NAMEOF('Fact_Dataframe'[Color]), 2),
+				    ("Calificación del Cliente", NAMEOF('Fact_Dataframe'[Calificación del Cliente]), 3),
+				    ("Categoría de Clasificación", NAMEOF('Fact_Dataframe'[Categoría Calificación]), 4),
+				    ("Género", NAMEOF('Fact_Dataframe'[Género]), 5),
+				    ("Marca", NAMEOF(Dim_Marcas[Marca]), 6),
+				    ("Método de Pago", NAMEOF('Dim_Métodos de Pago'[Método de Pago]), 7),
+				    ("Nivel de Ingresos del Cliente", NAMEOF('Fact_Dataframe'[Nivel de Ingresos del Cliente]), 8),
+				    ("Modelo", NAMEOF('Fact_Dataframe'[Modelo]), 9),
+				    ("País", NAMEOF('Dim_Países'[País]), 10),
+				    ("Talle", NAMEOF('Fact_Dataframe'[Talle]), 11)
+				}
+
+	annotation PBI_Id = 1958389cd2224fff9cb4c1213730c1ed
+

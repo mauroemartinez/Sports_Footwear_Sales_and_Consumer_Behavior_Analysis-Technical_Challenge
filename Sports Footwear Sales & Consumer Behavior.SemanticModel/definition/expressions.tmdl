@@ -1,0 +1,87 @@
+/// Ubicación del CSV de origen: una URL (http/https) o una ruta local completa al archivo. Por defecto, la copia publicada en el repositorio de GitHub.
+expression OrigenDatos = "https://raw.githubusercontent.com/mauroemartinez/Sports_Footwear_Sales_and_Consumer_Behavior_Analysis-Technical_Challenge/main/Data/global_sports_footwear_sales_2018_2026.csv" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 3f1c2a7e-8b54-4d0e-9a61-2c7d5e9b1a01
+	queryGroup: Parámetros
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Text
+
+/// Devuelve una dimensión con los valores distintos de una columna, ordenados y con una clave entera desde 1.
+expression fnCrearDimension =
+		(tabla as table, columna as text, nombreClave as text) as table =>
+		let
+		    ValoresDistintos = Table.Distinct(Table.SelectColumns(tabla, {columna})),
+		    ValoresOrdenados = Table.Sort(ValoresDistintos, {{columna, Order.Ascending}}),
+		    ConClave = Table.AddIndexColumn(ValoresOrdenados, nombreClave, 1, 1, Int64.Type),
+		    ColumnasOrdenadas = Table.ReorderColumns(ConClave, {nombreClave, columna})
+		in
+		    ColumnasOrdenadas
+	lineageTag: 6a2e9d41-0c3b-4f8a-b7e5-91d2c4a6f802
+	queryGroup: Funciones
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Function
+
+/// Ventas limpias a nivel de orden. Base de la tabla de hechos y de todas las dimensiones; no se carga al modelo.
+expression Ventas_Origen =
+		let
+		    // Lee el CSV desde una URL o desde un archivo local, según OrigenDatos
+		    Contenido = if Text.StartsWith(OrigenDatos, "http") then Web.Contents(OrigenDatos) else File.Contents(OrigenDatos),
+		    Origen = Csv.Document(Contenido, [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    EncabezadosPromovidos = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+		    // Tipos explícitos con cultura en-US: el CSV usa punto como separador decimal
+		    TiposDefinidos = Table.TransformColumnTypes(
+		        EncabezadosPromovidos,
+		        {
+		            {"order_id", type text}, {"order_date", type date}, {"brand", type text},
+		            {"model_name", type text}, {"category", type text}, {"gender", type text},
+		            {"size", Int64.Type}, {"color", type text}, {"base_price_usd", Int64.Type},
+		            {"discount_percent", Int64.Type}, {"final_price_usd", Currency.Type},
+		            {"units_sold", Int64.Type}, {"revenue_usd", Currency.Type},
+		            {"payment_method", type text}, {"sales_channel", type text}, {"country", type text},
+		            {"customer_income_level", type text}, {"customer_rating", type number}
+		        },
+		        "en-US"
+		    ),
+		    ColumnasRenombradas = Table.RenameColumns(
+		        TiposDefinidos,
+		        {
+		            {"order_id", "ID Orden"}, {"order_date", "Fecha"}, {"brand", "Marca"},
+		            {"model_name", "Modelo"}, {"category", "Categoría"}, {"gender", "Género"},
+		            {"size", "Talle"}, {"color", "Color"}, {"base_price_usd", "Precio Base USD"},
+		            {"discount_percent", "% Descuento"}, {"final_price_usd", "Precio Final USD"},
+		            {"units_sold", "Unidades Vendidas"}, {"revenue_usd", "Ingresos en USD"},
+		            {"payment_method", "Método de Pago"}, {"sales_channel", "Canal de Venta"},
+		            {"country", "País"}, {"customer_income_level", "Nivel de Ingresos del Cliente"},
+		            {"customer_rating", "Calificación del Cliente"}
+		        }
+		    ),
+		    // Traducción de valores por coincidencia exacta; los valores sin traducción se conservan
+		    Traducciones = [
+		        Género = [Men = "Masculino", Women = "Femenino"],
+		        Color = [Black = "Negro", Grey = "Gris", Red = "Rojo", Blue = "Azul", White = "Blanco"],
+		        #"Método de Pago" = [Card = "Tarjeta", Cash = "Efectivo", #"Bank Transfer" = "Transferencia", Wallet = "Billetera"],
+		        #"Nivel de Ingresos del Cliente" = [Low = "Bajo", Medium = "Medio", High = "Alto"]
+		    ],
+		    ValoresTraducidos = Table.TransformColumns(
+		        ColumnasRenombradas,
+		        List.Transform(
+		            Record.FieldNames(Traducciones),
+		            (columna) => {columna, (valor) => Record.FieldOrDefault(Record.Field(Traducciones, columna), valor, valor), type text}
+		        )
+		    ),
+		    // "Model-370" -> 370
+		    ModeloNumerico = Table.TransformColumns(ValoresTraducidos, {{"Modelo", each Number.From(Text.AfterDelimiter(_, "-")), Int64.Type}}),
+		    // 15 -> 0,15
+		    DescuentoComoPorcentaje = Table.TransformColumns(ModeloNumerico, {{"% Descuento", each _ / 100, Percentage.Type}})
+		in
+		    DescuentoComoPorcentaje
+	lineageTag: 9d7b3c18-5e2f-4a90-8c4d-7f1e0b2a3c03
+	queryGroup: Transformación
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

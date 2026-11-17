@@ -1,0 +1,191 @@
+/// Tabla contenedora de todas las medidas del modelo, organizadas en carpetas.
+table Medidas
+	lineageTag: 20e647f4-bc6d-457c-b4b9-28ca4fba3d50
+
+	/// Suma de los ingresos de las órdenes, en USD.
+	measure 'Ingresos en USD' = SUM(Fact_Dataframe[Ingresos en USD])
+		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Métricas Base
+		lineageTag: 1cbdf1c4-4333-4cf9-8dd3-0ea3dc2a2b31
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Suma de unidades vendidas.
+	measure 'Unidades Vendidas' = SUM(Fact_Dataframe[Unidades Vendidas])
+		formatString: #,0
+		displayFolder: Métricas Base
+		lineageTag: ece9cd10-122e-4856-8612-69e5a4481fec
+
+	/// Promedio de la calificación del cliente (escala 3 a 5) por orden.
+	measure 'Promedio Calificación de Cliente' = AVERAGE(Fact_Dataframe[Calificación del Cliente])
+		formatString: 0.00
+		displayFolder: Métricas Base
+		lineageTag: 5e82c6c2-5f24-4c6c-bd1b-a06381297e2a
+
+	/// Color hexadecimal para formato condicional según el color de producto, el género o la banda de calificación en contexto.
+	measure 'Mapeo de Colores' =
+			VAR ColorSeleccionado = SELECTEDVALUE(Fact_Dataframe[Color])
+			VAR GeneroSeleccionado = SELECTEDVALUE(Fact_Dataframe[Género])
+			VAR CalificacionSeleccionada = SELECTEDVALUE(Fact_Dataframe[Categoría Calificación])
+			VAR MapeoColor =
+			    SWITCH(
+			        ColorSeleccionado,
+			        "Negro", "#000000",
+			        "Gris", "#B0BEC5",
+			        "Rojo", "#E57373",
+			        "Azul", "#004987",
+			        "Blanco", "#ECEFF1"
+			    )
+			VAR MapeoGenero =
+			    SWITCH(
+			        GeneroSeleccionado,
+			        "Masculino", "#003777",
+			        "Femenino", "#BA68C8"
+			    )
+			VAR MapeoCalificacion =
+			    SWITCH(
+			        CalificacionSeleccionada,
+			        "Muy mala", "#C62828",
+			        "Mala", "#EF9A9A",
+			        "Buena", "#81C784",
+			        "Muy buena", "#2E7D32"
+			    )
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISINSCOPE(Fact_Dataframe[Color]) && NOT ISBLANK(MapeoColor), MapeoColor,
+			        ISINSCOPE(Fact_Dataframe[Género]) && NOT ISBLANK(MapeoGenero), MapeoGenero,
+			        ISINSCOPE(Fact_Dataframe[Categoría Calificación]) && NOT ISBLANK(MapeoCalificacion), MapeoCalificacion,
+			        "#776aca"
+			    )
+		displayFolder: Cosméticos
+		lineageTag: 1ec4f710-a212-4312-b626-ab00cfc9ced0
+
+	/// Cantidad de órdenes (una fila por orden en Fact_Dataframe).
+	measure 'Cantidad Órdenes' = COUNTROWS(Fact_Dataframe)
+		formatString: #,0
+		displayFolder: Métricas Base
+		lineageTag: 463d0d3a-efd8-4de3-8c2a-a0f1d029898f
+
+	/// Ingreso promedio por orden, en USD.
+	measure 'Ingresos Promedio' = DIVIDE([Ingresos en USD], [Cantidad Órdenes])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Métricas Base
+		lineageTag: 9bc6eec8-47f1-4883-acbf-e441f74ece5a
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Valor de la métrica elegida en el parámetro de campo Métrica.
+	measure 'Métrica Dinámica Valor' =
+			VAR MetricaSeleccionada = MAX('Métrica'[Métrica])
+			RETURN
+			    SWITCH(
+			        MetricaSeleccionada,
+			        "Ingresos en USD", [Ingresos en USD],
+			        "Unidades Vendidas", [Unidades Vendidas],
+			        "Cantidad Órdenes", [Cantidad Órdenes],
+			        "Ingresos Promedio", [Ingresos Promedio],
+			        "Promedio Calificación de Cliente", [Promedio Calificación de Cliente]
+			    )
+		displayFolder: Métricas Dinámicas
+		lineageTag: bbfb392b-3c46-4327-beb4-515e17dd2ef9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Participación del elemento sobre el total visible de la métrica elegida. Vacío para métricas de promedio.
+	measure '% del Total Visible' =
+			VAR NombreMetrica = MAX('Métrica'[Métrica])
+			VAR EsPromedio = NombreMetrica IN {"Ingresos Promedio", "Promedio Calificación de Cliente"}
+			VAR ValorMetrica = [Métrica Dinámica Valor]
+			VAR TotalVisible = CALCULATE([Métrica Dinámica Valor], ALLSELECTED())
+			RETURN
+			    IF(NOT EsPromedio, DIVIDE(ValorMetrica, TotalVisible))
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Métricas Dinámicas
+		lineageTag: 8da22283-c49d-418e-b995-b0aa1c17b0db
+
+	/// Ingresos del mismo período del año anterior.
+	measure 'Ingresos LY' = CALCULATE([Ingresos en USD], SAMEPERIODLASTYEAR(Calendario[Fecha]))
+		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Time Intelligence
+		lineageTag: 2ccbde72-884e-4e72-ad93-f48669903e37
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Variación porcentual de ingresos contra el año anterior. Vacío cuando no hay año anterior.
+	measure 'YoY % Ingresos' =
+			VAR Actual = [Ingresos en USD]
+			VAR Anterior = [Ingresos LY]
+			RETURN
+			    DIVIDE(Actual - Anterior, Anterior)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Time Intelligence
+		lineageTag: c20f1189-e9d6-4746-bbe7-31fc538d824d
+
+	/// Color para formato condicional de la variación interanual: rojo si cae, verde si crece.
+	measure 'Color YoY %' = IF([YoY % Ingresos] < 0, "#FF0000", "#008000")
+		displayFolder: Cosméticos
+		lineageTag: 18af7ea2-64f6-4884-a7a5-d48d105d8c7a
+
+	/// Promedio de los ingresos mensuales de los últimos 3 meses. Solo se calcula a nivel de mes y cuando hay 3 meses completos de historia.
+	measure 'Promedio Móvil 3 Meses' =
+			VAR UltimaFecha = MAX(Calendario[Fecha])
+			VAR Periodo = DATESINPERIOD(Calendario[Fecha], UltimaFecha, -3, MONTH)
+			VAR PrimeraFechaVentas = CALCULATE(MIN(Fact_Dataframe[Fecha]), REMOVEFILTERS())
+			VAR InicioVentana = EOMONTH(UltimaFecha, -3) + 1
+			VAR HayTresMeses = InicioVentana >= PrimeraFechaVentas
+			RETURN
+			    IF(
+			        HASONEVALUE(Calendario[Inicio Mes]) && HayTresMeses,
+			        CALCULATE(
+			            AVERAGEX(VALUES(Calendario[Inicio Mes]), [Ingresos en USD]),
+			            Periodo
+			        )
+			    )
+		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Time Intelligence
+		lineageTag: 6b5a64cd-e062-46b9-b1ff-b5849a2d67b5
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Máximo del eje Y del gráfico de tendencia: el mayor valor mensual entre ingresos y promedio móvil, más 2%.
+	measure 'Máximo + % para Eje Y Promedio Móvil vs Ingresos en USD' =
+			VAR Meses = CALCULATETABLE(VALUES(Calendario[Inicio Mes]), ALLSELECTED(Calendario))
+			VAR MaxIngreso = MAXX(Meses, [Ingresos en USD])
+			VAR MaxPromedio = MAXX(Meses, [Promedio Móvil 3 Meses])
+			RETURN
+			    MAX(MaxIngreso, MaxPromedio) * 1.02
+		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Cosméticos
+		lineageTag: e608f92f-d288-4331-bc13-c28a860d14fc
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	/// Título del gráfico de Overview según la métrica y la categoría elegidas.
+	measure 'Título Dinámico por Métrica' =
+			MAX('Métrica'[Métrica]) & " por " & MAX('Categorías'[Categorías])
+		displayFolder: Cosméticos
+		lineageTag: 8db6061a-5eeb-4d05-8aa7-baa3263fcd72
+
+	/// Diferencia de ingresos contra el año anterior, en USD. Vacío cuando no hay año anterior.
+	measure 'Ingresos YoY' = IF(NOT ISBLANK([Ingresos LY]), [Ingresos en USD] - [Ingresos LY])
+		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Time Intelligence
+		lineageTag: 880518b3-0f89-499f-a374-eb69ddfb29a7
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	partition Medidas = m
+		mode: import
+		queryGroup: Medidas
+		source =
+				let
+				    TablaVacia = #table(type table [Medidas = text], {}),
+				    SinColumnas = Table.RemoveColumns(TablaVacia, {"Medidas"})
+				in
+				    SinColumnas
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,33 @@
+/// Países donde se realizaron las ventas.
+table Dim_Países
+	lineageTag: 45a916a5-4e1c-4e2d-8ba2-5723c7353806
+
+	/// Clave sustituta generada en Power Query.
+	column 'Índice País'
+		isHidden
+		dataType: int64
+		formatString: 0
+		lineageTag: eab3befb-fd99-411b-9bf3-31e0d30cb9b3
+		summarizeBy: none
+		sourceColumn: Índice País
+
+		annotation SummarizationSetBy = Automatic
+
+	/// País de la venta.
+	column País
+		dataType: string
+		lineageTag: 3fdecacb-06e7-450a-97d6-0f1016fa5333
+		summarizeBy: none
+		sourceColumn: País
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Países = m
+		mode: import
+		queryGroup: Dimensiones
+		source = fnCrearDimension(Ventas_Origen, "País", "Índice País")
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

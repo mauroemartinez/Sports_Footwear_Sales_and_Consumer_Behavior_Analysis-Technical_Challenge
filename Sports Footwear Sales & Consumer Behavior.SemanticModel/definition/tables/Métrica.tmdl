@@ -1,0 +1,48 @@
+/// Parámetro de campo: métricas disponibles para el gráfico de Overview.
+table Métrica
+	lineageTag: 67b90f65-6ce8-4d47-bdba-4d8e907c53a0
+
+	column Métrica
+		lineageTag: 96d467a4-a944-4e6d-99e2-7fcfca87712f
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Métrica Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Métrica Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Métrica Fields'
+		isHidden
+		lineageTag: b2afa555-8580-4882-bb58-c3502d087def
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Métrica Order'
+
+		extendedProperty ParameterMetadata = {"version":3,"kind":2}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Métrica Order'
+		isHidden
+		formatString: 0
+		lineageTag: f6402460-1699-422a-8d4a-5bdeede976f1
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Métrica = calculated
+		mode: import
+		source =
+				{
+				    ("Cantidad Órdenes", NAMEOF('Medidas'[Cantidad Órdenes]), 0),
+				    ("Ingresos en USD", NAMEOF('Medidas'[Ingresos en USD]), 1),
+				    ("Ingresos Promedio", NAMEOF('Medidas'[Ingresos Promedio]), 2),
+				    ("Promedio Calificación de Cliente", NAMEOF('Medidas'[Promedio Calificación de Cliente]), 3),
+				    ("Unidades Vendidas", NAMEOF('Medidas'[Unidades Vendidas]), 4)
+				}
+
+	annotation PBI_Id = 0e631571e03444e38c64f651c9d4af15
+

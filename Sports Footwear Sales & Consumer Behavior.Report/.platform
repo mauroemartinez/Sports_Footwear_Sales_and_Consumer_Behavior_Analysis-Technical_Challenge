@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Sports Footwear Sales & Consumer Behavior"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "74ca313c-056b-40e5-b9cd-c5ae9a2d6495"
+  }
+}
