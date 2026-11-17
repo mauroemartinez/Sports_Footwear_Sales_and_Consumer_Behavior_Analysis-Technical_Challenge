@@ -22,10 +22,26 @@ table Dim_Países
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Bandera del país (imagen SVG incrustada).
+	column Bandera
+		dataType: string
+		dataCategory: ImageUrl
+		lineageTag: 2e9f6b14-7d3a-4c85-a1f0-6b4e8c2d9a57
+		summarizeBy: none
+		sourceColumn: Bandera
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Dim_Países = m
 		mode: import
 		queryGroup: Dimensiones
-		source = fnCrearDimension(Ventas_Origen, "País", "Índice País")
+		source =
+				let
+				    Paises = fnCrearDimension(Ventas_Origen, "País", "Índice País"),
+				    ConBandera = Table.NestedJoin(Paises, {"País"}, Banderas, {"País"}, "Banderas", JoinKind.LeftOuter),
+				    BanderaExpandida = Table.ExpandTableColumn(ConBandera, "Banderas", {"Bandera"})
+				in
+				    BanderaExpandida
 
 	annotation PBI_NavigationStepName = Navegación
 

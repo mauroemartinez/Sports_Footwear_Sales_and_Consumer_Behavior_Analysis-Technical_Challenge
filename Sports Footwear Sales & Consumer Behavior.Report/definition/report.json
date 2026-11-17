@@ -68,6 +68,31 @@
           "name": "Custom2843133247473627.json",
           "path": "Custom2843133247473627.json",
           "type": "CustomTheme"
+        },
+        {
+          "name": "icon-ingresos.png",
+          "path": "icon-ingresos.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-ingreso-promedio.png",
+          "path": "icon-ingreso-promedio.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-ordenes.png",
+          "path": "icon-ordenes.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-calificacion.png",
+          "path": "icon-calificacion.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-unidades.png",
+          "path": "icon-unidades.png",
+          "type": "Image"
         }
       ]
     }

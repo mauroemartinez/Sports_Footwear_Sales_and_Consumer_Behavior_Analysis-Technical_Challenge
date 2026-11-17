@@ -32,7 +32,7 @@ queryGroup Medidas
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["OrigenDatos","fnCrearDimension","Ventas_Origen","Dim_Marcas","Dim_Categoría","Canales de Venta","Dim_Métodos de Pago","Dim_Países","Fact_Dataframe","Medidas"]
+annotation PBI_QueryOrder = ["OrigenDatos","fnCrearDimension","Ventas_Origen","Banderas","Dim_Marcas","Dim_Categoría","Canales de Venta","Dim_Métodos de Pago","Dim_Países","Fact_Dataframe","Medidas"]
 
 annotation PBI_ProTooling = ["DaxQueryView_Desktop","MCP-PBIModeling","DevMode"]
 

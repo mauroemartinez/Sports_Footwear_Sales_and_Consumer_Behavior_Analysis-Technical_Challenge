@@ -34,6 +34,7 @@ Las consultas están organizadas en grupos:
 |---|---|---|
 | Parámetros | `OrigenDatos` | URL o ruta local del CSV. Por defecto apunta a la copia del repositorio en GitHub. |
 | Funciones | `fnCrearDimension` | Arma una dimensión con los valores distintos de una columna, ordenados y con clave entera. |
+| Transformación | `Banderas` | Bandera de cada país como imagen SVG incrustada. Se une a `Dim_Países`. |
 | Transformación | `Ventas_Origen` | Lee el CSV, define tipos, renombra columnas al español y traduce valores. No se carga al modelo. |
 | Dimensiones | `Dim_Marcas`, `Dim_Categoría`, `Canales de Venta`, `Dim_Métodos de Pago`, `Dim_Países` | Una llamada a `fnCrearDimension` cada una. |
 | Hechos | `Fact_Dataframe` | Reemplaza cada atributo por la clave de su dimensión. |
@@ -73,7 +74,7 @@ Esquema estrella con una tabla de hechos a nivel de orden:
 
 | Carpeta | Medidas |
 |---|---|
-| Métricas Base | `Ingresos en USD`, `Unidades Vendidas`, `Cantidad Órdenes`, `Ingresos Promedio` (por orden), `Promedio Calificación de Cliente` |
+| Métricas Base | `Ingresos en USD`, `Unidades Vendidas`, `Cantidad Órdenes`, `Ingresos Promedio` (por orden), `Promedio Calificación de Cliente`, `% Ingresos por País` |
 | Métricas Dinámicas | `Métrica Dinámica Valor`, `% del Total Visible` |
 | Time Intelligence | `Ingresos LY`, `Ingresos YoY`, `YoY % Ingresos`, `Promedio Móvil 3 Meses` |
 | Cosméticos | colores condicionales, título dinámico y máximo del eje Y |
@@ -87,6 +88,7 @@ Esquema estrella con una tabla de hechos a nivel de orden:
   - Los botones de marcadores de la izquierda llevan a ocho vistas predefinidas, como ingresos por país o distribución de calificaciones.
   - Los segmentadores de los parámetros están ocultos para el usuario de negocio. Los analistas pueden mostrarlos desde el panel de selección, con los elementos "Métrica" y "Categorías".
 - **Time Intelligence:** variación interanual de ingresos, e ingresos mensuales con el promedio móvil de tres meses.
+- **Mercados:** una fila por país con su bandera: ingresos, participación en los ingresos, órdenes, unidades, ingreso por orden y calificación promedio.
 - **Diseño:** usa la paleta de la marca GlobalAIze.
   - **Fondos:** azul marino.
   - **Celeste:** la serie principal y los elementos seleccionados.

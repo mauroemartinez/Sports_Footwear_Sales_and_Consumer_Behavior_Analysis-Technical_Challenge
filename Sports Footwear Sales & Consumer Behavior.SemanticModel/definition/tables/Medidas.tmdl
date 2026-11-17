@@ -167,6 +167,12 @@ table Medidas
 		displayFolder: Cosméticos
 		lineageTag: 8db6061a-5eeb-4d05-8aa7-baa3263fcd72
 
+	/// Participación de cada país en los ingresos de los países visibles.
+	measure '% Ingresos por País' = DIVIDE([Ingresos en USD], CALCULATE([Ingresos en USD], ALLSELECTED('Dim_Países')))
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: Métricas Base
+		lineageTag: 5d8a3f62-9c1e-4b07-8e2a-4f6c1d9b7e30
+
 	/// Diferencia de ingresos contra el año anterior, en USD. Vacío cuando no hay año anterior.
 	measure 'Ingresos YoY' = IF(NOT ISBLANK([Ingresos LY]), [Ingresos en USD] - [Ingresos LY])
 		formatString: \$#,0;(\$#,0);\$#,0
