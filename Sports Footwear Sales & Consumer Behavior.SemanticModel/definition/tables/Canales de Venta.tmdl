@@ -4,8 +4,8 @@ table 'Canales de Venta'
 
 	/// Clave sustituta generada en Power Query.
 	column 'Índice Canales de Venta'
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 34268fc6-e092-474d-86f4-ee5837604ec1
 		summarizeBy: none

@@ -4,8 +4,8 @@ table Dim_Categoría
 
 	/// Clave sustituta generada en Power Query.
 	column 'Índice Categorías'
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 120c7089-c485-4f17-8225-eb29dff79fab
 		summarizeBy: none

@@ -4,8 +4,8 @@ table 'Dim_Métodos de Pago'
 
 	/// Clave sustituta generada en Power Query.
 	column 'Índice Métodos de Pago'
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: b3a6d2ef-3fe2-49e1-a247-37e17609afa3
 		summarizeBy: none

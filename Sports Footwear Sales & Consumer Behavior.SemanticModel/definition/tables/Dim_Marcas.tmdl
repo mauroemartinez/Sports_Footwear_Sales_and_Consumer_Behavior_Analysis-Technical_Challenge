@@ -4,8 +4,8 @@ table Dim_Marcas
 
 	/// Clave sustituta generada en Power Query.
 	column 'Índice Marcas'
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 91f630a3-654b-47db-8332-3acfdc368e09
 		summarizeBy: none

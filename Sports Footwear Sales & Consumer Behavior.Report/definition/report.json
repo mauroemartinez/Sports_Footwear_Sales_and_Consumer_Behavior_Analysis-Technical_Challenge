@@ -1,0 +1,113 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY25SU12",
+      "reportVersionAtImport": {
+        "visual": "2.5.0",
+        "report": "3.1.0",
+        "page": "2.3.0"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Custom2843133247473627.json",
+      "reportVersionAtImport": {
+        "visual": "2.5.0",
+        "report": "3.1.0",
+        "page": "2.3.0"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY25SU12",
+          "path": "BaseThemes/CY25SU12.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Custom2843133247473627.json",
+          "path": "Custom2843133247473627.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "money-bag_121801843658140487890962.png",
+          "path": "money-bag_121801843658140487890962.png",
+          "type": "Image"
+        },
+        {
+          "name": "money-bag_1218018444257572403650947.png",
+          "path": "money-bag_1218018444257572403650947.png",
+          "type": "Image"
+        },
+        {
+          "name": "payment_42798875744866293741806.png",
+          "path": "payment_42798875744866293741806.png",
+          "type": "Image"
+        },
+        {
+          "name": "rating_47126901975839956498452.png",
+          "path": "rating_47126901975839956498452.png",
+          "type": "Image"
+        },
+        {
+          "name": "shopping-list_1829374222350888961323367.png",
+          "path": "shopping-list_1829374222350888961323367.png",
+          "type": "Image"
+        },
+        {
+          "name": "sneaker_194484643869660250694675.png",
+          "path": "sneaker_194484643869660250694675.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

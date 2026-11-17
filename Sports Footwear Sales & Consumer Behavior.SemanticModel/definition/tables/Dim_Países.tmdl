@@ -4,8 +4,8 @@ table Dim_Países
 
 	/// Clave sustituta generada en Power Query.
 	column 'Índice País'
-		isHidden
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: eab3befb-fd99-411b-9bf3-31e0d30cb9b3
 		summarizeBy: none

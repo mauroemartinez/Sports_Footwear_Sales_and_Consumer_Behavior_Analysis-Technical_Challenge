@@ -1,5 +1,3295 @@
 cultureInfo es-AR
 
-	linguisticMetadata = {"Version":"4.1.0","Language":"en-US","Entities":{"df":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe"}},"State":"Generated","Terms":[{"df":{"State":"Generated"}}]},"df.ID_orden":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe","ConceptualProperty":"ID Orden"}},"State":"Generated","Terms":[{"ID orden":{"State":"Generated"}},{"identification orden":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.6}},{"identity orden":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.6}},{"identifier orden":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.6}},{"credential orden":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.582}}]},"df.fecha":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe","ConceptualProperty":"Fecha"}},"State":"Generated","Terms":[{"fecha":{"State":"Generated"}},{"date":{"State":"Generated","Weight":0.7}}],"SemanticType":"Time"},"df.modelo":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe","ConceptualProperty":"Modelo"}},"State":"Generated","Terms":[{"modelo":{"State":"Generated"}}]},"df.género":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe","ConceptualProperty":"Género"}},"State":"Generated","Terms":[{"género":{"State":"Generated"}}]},"df.talle":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe","ConceptualProperty":"Talle"}},"State":"Generated","Terms":[{"talle":{"State":"Generated"}}]},"df.color":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe","ConceptualProperty":"Color"}},"State":"Generated","Terms":[{"color":{"State":"Generated"}},{"hue":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.491}},{"tint":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.476}},{"shade":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.476}},{"dye":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.476}},{"paint":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.476}},{"pigment":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.476}}]},"df.precio_base_USD":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe","ConceptualProperty":"Precio Base USD"}},"State":"Generated","Terms":[{"precio base USD":{"State":"Generated"}}]},"df.descuento":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe","ConceptualProperty":"% Descuento"}},"State":"Generated","Terms":[{"% descuento":{"State":"Generated"}},{"percentage descuento":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.6}},{"pct descuento":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.582}}]},"df.precio_final_USD":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe","ConceptualProperty":"Precio Final USD"}},"State":"Generated","Terms":[{"precio final USD":{"State":"Generated"}}]},"df.unidades_vendida":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe","ConceptualProperty":"Unidades Vendidas"}},"State":"Generated","Terms":[{"unidades vendida":{"State":"Generated"}},{"unidade vendida":{"Type":"Noun","State":"Generated","Weight":0.78}}]},"df.ingresos_en_USD":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe","ConceptualProperty":"Ingresos en USD"}},"State":"Generated","Terms":[{"ingresos en USD":{"State":"Generated"}},{"ingreso en USD":{"Type":"Noun","State":"Generated","Weight":0.78}}]},"df.nivel_de_ingresos_del_cliente":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe","ConceptualProperty":"Nivel de Ingresos del Cliente"}},"State":"Generated","Terms":[{"nivel de ingresos del cliente":{"State":"Generated"}},{"nivel de ingreso del cliente":{"Type":"Noun","State":"Generated","Weight":0.78}},{"Ingresos Cliente":{"State":"Suggested","Source":{"Type":"External","Agent":"PowerBI.VisualColumnRename"},"Weight":0.9}}]},"df.calificación_del_cliente":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe","ConceptualProperty":"Calificación del Cliente"}},"State":"Generated","Terms":[{"calificación del cliente":{"State":"Generated"}}]},"calendario":{"Definition":{"Binding":{"ConceptualEntity":"Calendario"}},"State":"Generated","Terms":[{"calendario":{"State":"Generated"}}]},"calendario.año":{"Definition":{"Binding":{"ConceptualEntity":"Calendario","ConceptualProperty":"Año"}},"State":"Generated","Terms":[{"año":{"State":"Generated"}}]},"calendario.me":{"Definition":{"Binding":{"ConceptualEntity":"Calendario","ConceptualProperty":"Mes"}},"State":"Generated","Terms":[{"me":{"State":"Generated"}}]},"calendario.nro_me":{"Definition":{"Binding":{"ConceptualEntity":"Calendario","ConceptualProperty":"NroMes"}},"State":"Generated","Terms":[{"nro me":{"State":"Generated"}},{"NroMes":{"Type":"Noun","State":"Generated","Weight":0.99}}]},"calendario.día":{"Definition":{"Binding":{"ConceptualEntity":"Calendario","ConceptualProperty":"Día"}},"State":"Generated","Terms":[{"día":{"State":"Generated"}}]},"calendario.día_semana":{"Definition":{"Binding":{"ConceptualEntity":"Calendario","ConceptualProperty":"Día semana"}},"State":"Generated","Terms":[{"día semana":{"State":"Generated"}}]},"calendario.fecha":{"Definition":{"Binding":{"ConceptualEntity":"Calendario","ConceptualProperty":"Fecha"}},"State":"Generated","Terms":[{"fecha":{"State":"Generated"}},{"date":{"State":"Generated","Weight":0.7}}],"SemanticType":"Time"},"calendario.día_semana_nro":{"Definition":{"Binding":{"ConceptualEntity":"Calendario","ConceptualProperty":"Día Semana Nro"}},"State":"Generated","Terms":[{"día semana nro":{"State":"Generated"}}]},"medida":{"Definition":{"Binding":{"ConceptualEntity":"Medidas"}},"State":"Generated","Terms":[{"medida":{"State":"Generated"}}]},"medida.ingresos_en_USD":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"Ingresos en USD"}},"State":"Generated","Terms":[{"ingresos en USD":{"State":"Generated"}},{"Ingresos del Año":{"State":"Suggested","Source":{"Type":"External","Agent":"PowerBI.VisualColumnRename"},"Weight":0.9}}]},"medida.unidades_vendida":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"Unidades Vendidas"}},"State":"Generated","Terms":[{"unidades vendida":{"State":"Generated"}}]},"medida.promedio_calificación_de_cliente":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"Promedio Calificación de Cliente"}},"State":"Generated","Terms":[{"promedio calificación de cliente":{"State":"Generated"}},{"Promedio Calificación":{"State":"Suggested","Source":{"Type":"External","Agent":"PowerBI.VisualColumnRename"},"Weight":0.9}}]},"medida.mapeo_de_colores":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"Mapeo de Colores"}},"State":"Generated","Terms":[{"mapeo de colores":{"State":"Generated"}}]},"medida.cantidad_órdenes":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"Cantidad Órdenes"}},"State":"Generated","Terms":[{"cantidad órdenes":{"State":"Generated"}}]},"medida.ingresos_promedio":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"Ingresos Promedio"}},"State":"Generated","Terms":[{"ingresos promedio":{"State":"Generated"}}]},"categoría":{"Definition":{"Binding":{"ConceptualEntity":"Categorías"}},"State":"Generated","Terms":[{"categoría":{"State":"Generated"}}]},"categoría.categoría":{"Definition":{"Binding":{"ConceptualEntity":"Categorías","ConceptualProperty":"Categorías"}},"State":"Generated","Terms":[{"categoría":{"State":"Generated"}},{"categoría name":{"State":"Generated"}}],"NameType":"Name"},"categoría.categorías_field":{"Definition":{"Binding":{"ConceptualEntity":"Categorías","ConceptualProperty":"Categorías Fields"}},"State":"Generated","Visibility":{"Value":"Hidden"},"Terms":[{"categorías field":{"State":"Generated"}},{"categoría field":{"Type":"Noun","State":"Generated","Weight":0.78}},{"categoría arena":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.5}},{"categoría turf":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"categoría ground":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"categoría pitch":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"categoría park":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"categoría meadow":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.475}},{"categoría grassland":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.475}},{"categoría lea":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.475}},{"categoría pasture":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.461}},{"categoría countryside":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.461}}]},"categoría.categorías_order":{"Definition":{"Binding":{"ConceptualEntity":"Categorías","ConceptualProperty":"Categorías Order"}},"State":"Generated","Visibility":{"Value":"Hidden"},"Terms":[{"categorías order":{"State":"Generated"}},{"categoría order":{"Type":"Noun","State":"Generated","Weight":0.78}},{"categoría instruction":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.5}},{"categoría direction":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.5}},{"categoría edict":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.5}},{"categoría command":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"categoría directive":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"categoría demand":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"categoría mandate":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"categoría imperative":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"categoría stability":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.475}},{"categoría harmony":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.475}}]},"métrica":{"Definition":{"Binding":{"ConceptualEntity":"Métrica"}},"State":"Generated","Terms":[{"métrica":{"State":"Generated"}}]},"métrica.métrica":{"Definition":{"Binding":{"ConceptualEntity":"Métrica","ConceptualProperty":"Métrica"}},"State":"Generated","Terms":[{"métrica":{"State":"Generated"}},{"métrica name":{"State":"Generated"}}],"NameType":"Name"},"métrica.métrica_field":{"Definition":{"Binding":{"ConceptualEntity":"Métrica","ConceptualProperty":"Métrica Fields"}},"State":"Generated","Visibility":{"Value":"Hidden"},"Terms":[{"métrica field":{"State":"Generated"}},{"métrica arena":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.5}},{"métrica turf":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"métrica ground":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"métrica pitch":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"métrica park":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"métrica meadow":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.475}},{"métrica grassland":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.475}},{"métrica lea":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.475}},{"métrica pasture":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.461}},{"métrica countryside":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.461}}]},"métrica.métrica_order":{"Definition":{"Binding":{"ConceptualEntity":"Métrica","ConceptualProperty":"Métrica Order"}},"State":"Generated","Visibility":{"Value":"Hidden"},"Terms":[{"métrica order":{"State":"Generated"}},{"métrica instruction":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.5}},{"métrica direction":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.5}},{"métrica edict":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.5}},{"métrica command":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"métrica directive":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"métrica demand":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"métrica mandate":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"métrica imperative":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.485}},{"métrica stability":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.475}},{"métrica harmony":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.475}}]},"df.categoría_calificación":{"Definition":{"Binding":{"ConceptualEntity":"Fact_Dataframe","ConceptualProperty":"Categoría Calificación"}},"State":"Generated","Terms":[{"categoría calificación":{"State":"Generated"}}]},"medida.métrica_dinámica_valor":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"Métrica Dinámica Valor"}},"State":"Generated","Terms":[{"métrica dinámica valor":{"State":"Generated"}},{"métrica dinámica courage":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.508}},{"métrica dinámica bravery":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.508}},{"métrica dinámica heroism":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.508}},{"métrica dinámica fearlessness":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.508}},{"métrica dinámica boldness":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.508}},{"métrica dinámica gallantry":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.508}},{"métrica dinámica lionheartedness":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.508}},{"métrica dinámica pluck":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.492}},{"métrica dinámica spirit":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.492}},{"métrica dinámica nerve":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.492}}]},"medida.del_total_visible":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"% del Total Visible"}},"State":"Generated","Terms":[{"% del total visible":{"State":"Generated"}},{"% del aggregate visible":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.748}},{"% del overall visible":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.748}},{"percentage del total visible":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.617}},{"pct del total visible":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.599}}]},"medida.ingresos_LY":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"Ingresos LY"}},"State":"Generated","Terms":[{"ingresos LY":{"State":"Generated"}}]},"medida.YoY__ingresos":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"YoY % Ingresos"}},"State":"Generated","Terms":[{"YoY % ingresos":{"State":"Generated"}},{"yoy percentage ingreso":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.609}},{"yoy pct ingreso":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.591}},{"YoY % IngresosVariación %":{"State":"Suggested","Source":{"Type":"External","Agent":"PowerBI.VisualColumnRename"},"Weight":0.9}}]},"medida.color_YoY_":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"Color YoY %"}},"State":"Generated","Terms":[{"color YoY %":{"State":"Generated"}},{"color yoy percentage":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.762}},{"color yoy pct":{"Type":"Noun","State":"Suggested","Source":{"Agent":"Thesaurus"},"Weight":0.739}}]},"medida.promedio_móvil_3_meses":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"Promedio Móvil 3 Meses"}},"State":"Generated","Terms":[{"promedio móvil 3 meses":{"State":"Generated"}}]},"medida.máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"Máximo + % para Eje Y Promedio Móvil vs Ingresos en USD"}},"State":"Generated","Terms":[{"máximo + % para eje y promedio móvil vs ingresos en USD":{"State":"Generated"}}]},"medida.título_dinámico_por_métrica":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"Título Dinámico por Métrica"}},"State":"Generated","Terms":[{"título dinámico por métrica":{"State":"Generated"}}]},"medida.ingresos_YoY":{"Definition":{"Binding":{"ConceptualEntity":"Medidas","ConceptualProperty":"Ingresos YoY"}},"State":"Generated","Terms":[{"ingresos YoY":{"State":"Generated"}}]}},"Relationships":{"df_has_calendario":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"calendario":{"Target":{"Entity":"calendario"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"calendario"}},"State":"Generated","Weight":0.99,"ID":"df_have_calendarios"},{"Attribute":{"Subject":{"Role":"calendario"},"Object":{"Role":"df"}},"State":"Generated","Weight":0.99,"ID":"calendarios_have_df"}]},"df_has_medida_ingresos_YoY":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"medida.ingresos_YoY":{"Target":{"Entity":"medida.ingresos_YoY"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"medida.ingresos_YoY"}},"State":"Generated","Weight":0.99,"ID":"df_have_ingresos_YoY"}]},"métrica_has_medida_título_dinámico_por_métrica":{"Binding":{"ConceptualEntity":"Métrica"},"State":"Generated","Roles":{"métrica":{"Target":{"Entity":"métrica"}},"medida.título_dinámico_por_métrica":{"Target":{"Entity":"medida.título_dinámico_por_métrica"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"métrica"},"Object":{"Role":"medida.título_dinámico_por_métrica"}},"State":"Generated","Weight":0.99,"ID":"métricas_have_título_dinámico_por_métrica"}]},"categoría_has_medida_título_dinámico_por_métrica":{"Binding":{"ConceptualEntity":"Categorías"},"State":"Generated","Roles":{"categoría":{"Target":{"Entity":"categoría"}},"medida.título_dinámico_por_métrica":{"Target":{"Entity":"medida.título_dinámico_por_métrica"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"categoría"},"Object":{"Role":"medida.título_dinámico_por_métrica"}},"State":"Generated","Weight":0.99,"ID":"categorías_have_título_dinámico_por_métrica"}]},"df_has_medida_máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"medida.máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD":{"Target":{"Entity":"medida.máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"medida.máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD"}},"State":"Generated","Weight":0.99,"ID":"df_have_máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD"}]},"calendario_has_medida_máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD":{"Binding":{"ConceptualEntity":"Calendario"},"State":"Generated","Roles":{"calendario":{"Target":{"Entity":"calendario"}},"medida.máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD":{"Target":{"Entity":"medida.máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"calendario"},"Object":{"Role":"medida.máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD"}},"State":"Generated","Weight":0.99,"ID":"calendarios_have_máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD"}]},"df_has_medida_promedio_móvil_3_meses":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"medida.promedio_móvil_3_meses":{"Target":{"Entity":"medida.promedio_móvil_3_meses"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"medida.promedio_móvil_3_meses"}},"State":"Generated","Weight":0.99,"ID":"df_have_promedio_móvil_3_meses"}]},"calendario_has_medida_promedio_móvil_3_meses":{"Binding":{"ConceptualEntity":"Calendario"},"State":"Generated","Roles":{"calendario":{"Target":{"Entity":"calendario"}},"medida.promedio_móvil_3_meses":{"Target":{"Entity":"medida.promedio_móvil_3_meses"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"calendario"},"Object":{"Role":"medida.promedio_móvil_3_meses"}},"State":"Generated","Weight":0.99,"ID":"calendarios_have_promedio_móvil_3_meses"}]},"df_has_medida_color_YoY_":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"medida.color_YoY_":{"Target":{"Entity":"medida.color_YoY_"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"medida.color_YoY_"}},"State":"Generated","Weight":0.99,"ID":"df_have_color_YoY_"}]},"df_has_medida_YoY__ingresos":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"medida.YoY__ingresos":{"Target":{"Entity":"medida.YoY__ingresos"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"medida.YoY__ingresos"}},"State":"Generated","Weight":0.99,"ID":"df_have_YoY__ingresos"}]},"df_has_medida_ingresos_LY":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"medida.ingresos_LY":{"Target":{"Entity":"medida.ingresos_LY"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"medida.ingresos_LY"}},"State":"Generated","Weight":0.99,"ID":"df_have_ingresos_LY"}]},"df_has_medida_del_total_visible":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"medida.del_total_visible":{"Target":{"Entity":"medida.del_total_visible"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"medida.del_total_visible"}},"State":"Generated","Weight":0.99,"ID":"df_have__del_total_visible"}]},"métrica_has_medida_del_total_visible":{"Binding":{"ConceptualEntity":"Métrica"},"State":"Generated","Roles":{"métrica":{"Target":{"Entity":"métrica"}},"medida.del_total_visible":{"Target":{"Entity":"medida.del_total_visible"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"métrica"},"Object":{"Role":"medida.del_total_visible"}},"State":"Generated","Weight":0.99,"ID":"métricas_have__del_total_visible"}]},"df_has_medida_métrica_dinámica_valor":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"medida.métrica_dinámica_valor":{"Target":{"Entity":"medida.métrica_dinámica_valor"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"medida.métrica_dinámica_valor"}},"State":"Generated","Weight":0.99,"ID":"df_have_métrica_dinámica_valor"}]},"métrica_has_medida_métrica_dinámica_valor":{"Binding":{"ConceptualEntity":"Métrica"},"State":"Generated","Roles":{"métrica":{"Target":{"Entity":"métrica"}},"medida.métrica_dinámica_valor":{"Target":{"Entity":"medida.métrica_dinámica_valor"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"métrica"},"Object":{"Role":"medida.métrica_dinámica_valor"}},"State":"Generated","Weight":0.99,"ID":"métricas_have_métrica_dinámica_valor"}]},"df_has_categoría_calificación":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.categoría_calificación":{"Target":{"Entity":"df.categoría_calificación"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.categoría_calificación"}},"State":"Generated","Weight":0.99,"ID":"df_have_categoría_calificacións"}]},"métrica_has_métrica":{"Binding":{"ConceptualEntity":"Métrica"},"State":"Generated","Roles":{"métrica":{"Target":{"Entity":"métrica"}},"métrica.métrica":{"Target":{"Entity":"métrica.métrica"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"métrica"},"Object":{"Role":"métrica.métrica"}},"State":"Generated","Weight":0.99,"ID":"métricas_have_métricas"},{"Name":{"Subject":{"Role":"métrica"},"Name":{"Role":"métrica.métrica"}},"State":"Generated","Weight":0.99,"ID":"métricas_are_names_IDs_of_métricas"}]},"categoría_has_categoría":{"Binding":{"ConceptualEntity":"Categorías"},"State":"Generated","Roles":{"categoría":{"Target":{"Entity":"categoría"}},"categoría.categoría":{"Target":{"Entity":"categoría.categoría"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"categoría"},"Object":{"Role":"categoría.categoría"}},"State":"Generated","Weight":0.99,"ID":"categorías_have_categorías"},{"Name":{"Subject":{"Role":"categoría"},"Name":{"Role":"categoría.categoría"}},"State":"Generated","Weight":0.99,"ID":"categorías_are_names_IDs_of_categorías"}]},"df_has_medida_ingresos_promedio":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"medida.ingresos_promedio":{"Target":{"Entity":"medida.ingresos_promedio"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"medida.ingresos_promedio"}},"State":"Generated","Weight":0.99,"ID":"df_have_ingresos_promedio"}]},"df_has_medida_cantidad_órdenes":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"medida.cantidad_órdenes":{"Target":{"Entity":"medida.cantidad_órdenes"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"medida.cantidad_órdenes"}},"State":"Generated","Weight":0.99,"ID":"df_have_cantidad_órdenes"}]},"df_has_medida_mapeo_de_colores":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"medida.mapeo_de_colores":{"Target":{"Entity":"medida.mapeo_de_colores"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"medida.mapeo_de_colores"}},"State":"Generated","Weight":0.99,"ID":"df_have_mapeo_de_colores"}]},"df_has_medida_promedio_calificación_de_cliente":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"medida.promedio_calificación_de_cliente":{"Target":{"Entity":"medida.promedio_calificación_de_cliente"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"medida.promedio_calificación_de_cliente"}},"State":"Generated","Weight":0.99,"ID":"df_have_promedio_calificación_de_cliente"}]},"df_has_medida_unidades_vendida":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"medida.unidades_vendida":{"Target":{"Entity":"medida.unidades_vendida"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"medida.unidades_vendida"}},"State":"Generated","Weight":0.99,"ID":"df_have_unidades_vendida"}]},"df_has_medida_ingresos_en_USD":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"medida.ingresos_en_USD":{"Target":{"Entity":"medida.ingresos_en_USD"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"medida.ingresos_en_USD"}},"State":"Generated","Weight":0.99,"ID":"df_have_ingresos_en_USD"}]},"calendario_has_día_semana_nro":{"Binding":{"ConceptualEntity":"Calendario"},"State":"Generated","Roles":{"calendario":{"Target":{"Entity":"calendario"}},"calendario.día_semana_nro":{"Target":{"Entity":"calendario.día_semana_nro"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"calendario"},"Object":{"Role":"calendario.día_semana_nro"}},"State":"Generated","Weight":0.99,"ID":"calendarios_have_día_semana_nros"}]},"calendario_has_fecha":{"Binding":{"ConceptualEntity":"Calendario"},"State":"Generated","Roles":{"calendario":{"Target":{"Entity":"calendario"}},"calendario.fecha":{"Target":{"Entity":"calendario.fecha"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"calendario"},"Object":{"Role":"calendario.fecha"}},"State":"Generated","Weight":0.99,"ID":"calendarios_have_fechas"}]},"calendario_has_día_semana":{"Binding":{"ConceptualEntity":"Calendario"},"State":"Generated","Roles":{"calendario":{"Target":{"Entity":"calendario"}},"calendario.día_semana":{"Target":{"Entity":"calendario.día_semana"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"calendario"},"Object":{"Role":"calendario.día_semana"}},"State":"Generated","Weight":0.99,"ID":"calendarios_have_día_semanas"}]},"calendario_has_día":{"Binding":{"ConceptualEntity":"Calendario"},"State":"Generated","Roles":{"calendario":{"Target":{"Entity":"calendario"}},"calendario.día":{"Target":{"Entity":"calendario.día"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"calendario"},"Object":{"Role":"calendario.día"}},"State":"Generated","Weight":0.99,"ID":"calendarios_have_días"}]},"calendario_has_nro_me":{"Binding":{"ConceptualEntity":"Calendario"},"State":"Generated","Roles":{"calendario":{"Target":{"Entity":"calendario"}},"calendario.nro_me":{"Target":{"Entity":"calendario.nro_me"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"calendario"},"Object":{"Role":"calendario.nro_me"}},"State":"Generated","Weight":0.99,"ID":"calendarios_have_nro_me"}]},"calendario_has_me":{"Binding":{"ConceptualEntity":"Calendario"},"State":"Generated","Roles":{"calendario":{"Target":{"Entity":"calendario"}},"calendario.me":{"Target":{"Entity":"calendario.me"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"calendario"},"Object":{"Role":"calendario.me"}},"State":"Generated","Weight":0.99,"ID":"calendarios_have_me"}]},"calendario_has_año":{"Binding":{"ConceptualEntity":"Calendario"},"State":"Generated","Roles":{"calendario":{"Target":{"Entity":"calendario"}},"calendario.año":{"Target":{"Entity":"calendario.año"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"calendario"},"Object":{"Role":"calendario.año"}},"State":"Generated","Weight":0.99,"ID":"calendarios_have_años"}]},"df_has_calificación_del_cliente":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.calificación_del_cliente":{"Target":{"Entity":"df.calificación_del_cliente"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.calificación_del_cliente"}},"State":"Generated","Weight":0.99,"ID":"df_have_calificación_del_clientes"}]},"df_has_nivel_de_ingresos_del_cliente":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.nivel_de_ingresos_del_cliente":{"Target":{"Entity":"df.nivel_de_ingresos_del_cliente"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.nivel_de_ingresos_del_cliente"}},"State":"Generated","Weight":0.99,"ID":"df_have_nivel_de_ingresos_del_clientes"}]},"df_has_país":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.país":{"Target":{"Entity":"df.país"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.país"}},"State":"Generated","Weight":0.99,"ID":"df_have_país"}]},"df_has_canal_de_venta":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.canal_de_venta":{"Target":{"Entity":"df.canal_de_venta"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.canal_de_venta"}},"State":"Generated","Weight":0.99,"ID":"df_have_canal_de_ventas"}]},"df_has_método_de_pago":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.método_de_pago":{"Target":{"Entity":"df.método_de_pago"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.método_de_pago"}},"State":"Generated","Weight":0.99,"ID":"df_have_método_de_pago"}]},"df_has_ingresos_en_USD":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.ingresos_en_USD":{"Target":{"Entity":"df.ingresos_en_USD"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.ingresos_en_USD"}},"State":"Generated","Weight":0.99,"ID":"df_have_ingresos_en_USD1"},{"Adjective":{"Subject":{"Role":"df"},"Adjectives":[{"expensive":{"State":"Generated"}}],"Antonyms":[{"cheap":{"State":"Generated"}}],"Measurement":{"Role":"df.ingresos_en_USD"}},"State":"Generated","Weight":0.99,"ID":"ingresos_en_USD_indicates_how_expensive_df_are"}]},"df_has_unidades_vendida":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.unidades_vendida":{"Target":{"Entity":"df.unidades_vendida"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.unidades_vendida"}},"State":"Generated","Weight":0.99,"ID":"df_have_unidades_vendidas"}]},"df_has_precio_final_USD":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.precio_final_USD":{"Target":{"Entity":"df.precio_final_USD"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.precio_final_USD"}},"State":"Generated","Weight":0.99,"ID":"df_have_precio_final_USD"},{"Adjective":{"Subject":{"Role":"df"},"Adjectives":[{"expensive":{"State":"Generated"}}],"Antonyms":[{"cheap":{"State":"Generated"}}],"Measurement":{"Role":"df.precio_final_USD"}},"State":"Generated","Weight":0.99,"ID":"precio_final_USD_indicates_how_expensive_df_are"}]},"df_has_descuento":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.descuento":{"Target":{"Entity":"df.descuento"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.descuento"}},"State":"Generated","Weight":0.99,"ID":"df_have__descuentos"}]},"df_has_precio_base_USD":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.precio_base_USD":{"Target":{"Entity":"df.precio_base_USD"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.precio_base_USD"}},"State":"Generated","Weight":0.99,"ID":"df_have_precio_base_USD"}]},"df_has_color":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.color":{"Target":{"Entity":"df.color"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.color"}},"State":"Generated","Weight":0.99,"ID":"df_have_colors"}]},"df_has_talle":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.talle":{"Target":{"Entity":"df.talle"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.talle"}},"State":"Generated","Weight":0.99,"ID":"df_have_talles"}]},"df_has_género":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.género":{"Target":{"Entity":"df.género"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.género"}},"State":"Generated","Weight":0.99,"ID":"df_have_géneros"}]},"df_has_categoría":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.categoría":{"Target":{"Entity":"df.categoría"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.categoría"}},"State":"Generated","Weight":0.99,"ID":"df_have_categorías"}]},"df_has_modelo":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.modelo":{"Target":{"Entity":"df.modelo"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.modelo"}},"State":"Generated","Weight":0.99,"ID":"df_have_modelos"}]},"df_has_marca":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.marca":{"Target":{"Entity":"df.marca"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.marca"}},"State":"Generated","Weight":0.99,"ID":"df_have_marcas"}]},"df_has_fecha":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.fecha":{"Target":{"Entity":"df.fecha"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.fecha"}},"State":"Generated","Weight":0.99,"ID":"df_have_fechas"}]},"df_has_ID_orden":{"Binding":{"ConceptualEntity":"Fact_Dataframe"},"State":"Generated","Roles":{"df":{"Target":{"Entity":"df"}},"df.ID_orden":{"Target":{"Entity":"df.ID_orden"}}},"Phrasings":[{"Attribute":{"Subject":{"Role":"df"},"Object":{"Role":"df.ID_orden"}},"State":"Generated","Weight":0.99,"ID":"df_have_ID_ordens"}]}},"Agents":{"Internal":{"Version":"1.1.0"}}}
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "df": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "df": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df.ID_orden": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe",
+			          "ConceptualProperty": "ID Orden"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ID orden": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification orden": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity orden": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier orden": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential orden": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "df.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe",
+			          "ConceptualProperty": "Fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "df.modelo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe",
+			          "ConceptualProperty": "Modelo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "modelo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df.género": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe",
+			          "ConceptualProperty": "Género"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "género": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df.talle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe",
+			          "ConceptualProperty": "Talle"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "talle": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df.color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe",
+			          "ConceptualProperty": "Color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "df.precio_base_USD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe",
+			          "ConceptualProperty": "Precio Base USD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "precio base USD": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df.descuento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe",
+			          "ConceptualProperty": "% Descuento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% descuento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage descuento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "pct descuento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "df.precio_final_USD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe",
+			          "ConceptualProperty": "Precio Final USD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "precio final USD": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "df.unidades_vendida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe",
+			          "ConceptualProperty": "Unidades Vendidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unidades vendida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "unidade vendida": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "df.ingresos_en_USD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe",
+			          "ConceptualProperty": "Ingresos en USD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ingresos en USD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ingreso en USD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "df.nivel_de_ingresos_del_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe",
+			          "ConceptualProperty": "Nivel de Ingresos del Cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nivel de ingresos del cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nivel de ingreso del cliente": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "Ingresos Cliente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "df.calificación_del_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe",
+			          "ConceptualProperty": "Calificación del Cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "calificación del cliente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "calendario": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.nro_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "NroMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nro me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NroMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.día_semana": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Día semana"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día semana": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "calendario.día_semana_nro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Día Semana Nro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día semana nro": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ingresos_en_USD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ingresos en USD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ingresos en USD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Ingresos del Año": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.unidades_vendida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Unidades Vendidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unidades vendida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.promedio_calificación_de_cliente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Promedio Calificación de Cliente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio calificación de cliente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Promedio Calificación": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.mapeo_de_colores": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Mapeo de Colores"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mapeo de colores": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cantidad_órdenes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Cantidad Órdenes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cantidad órdenes": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ingresos_promedio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ingresos Promedio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ingresos promedio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "categoría": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Categorías"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "categoría": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "categoría.categoría": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Categorías",
+			          "ConceptualProperty": "Categorías"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "categoría": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "categoría name": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "categoría.categorías_field": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Categorías",
+			          "ConceptualProperty": "Categorías Fields"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "categorías field": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "categoría field": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "categoría arena": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "categoría turf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "categoría ground": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "categoría pitch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "categoría park": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "categoría meadow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "categoría grassland": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "categoría lea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "categoría pasture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "categoría countryside": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "categoría.categorías_order": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Categorías",
+			          "ConceptualProperty": "Categorías Order"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "categorías order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "categoría order": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "categoría instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "categoría direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "categoría edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "categoría command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "categoría directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "categoría demand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "categoría mandate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "categoría imperative": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "categoría stability": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "categoría harmony": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "métrica": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Métrica"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "métrica": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "métrica.métrica": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Métrica",
+			          "ConceptualProperty": "Métrica"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "métrica": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "métrica name": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "métrica.métrica_field": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Métrica",
+			          "ConceptualProperty": "Métrica Fields"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "métrica field": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "métrica arena": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "métrica turf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "métrica ground": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "métrica pitch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "métrica park": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "métrica meadow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "métrica grassland": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "métrica lea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "métrica pasture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "métrica countryside": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "métrica.métrica_order": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Métrica",
+			          "ConceptualProperty": "Métrica Order"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "métrica order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "métrica instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "métrica direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "métrica edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "métrica command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "métrica directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "métrica demand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "métrica mandate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "métrica imperative": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "métrica stability": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "métrica harmony": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "df.categoría_calificación": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Dataframe",
+			          "ConceptualProperty": "Categoría Calificación"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "categoría calificación": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.métrica_dinámica_valor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Métrica Dinámica Valor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "métrica dinámica valor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "métrica dinámica courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "métrica dinámica bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "métrica dinámica heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "métrica dinámica fearlessness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "métrica dinámica boldness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "métrica dinámica gallantry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "métrica dinámica lionheartedness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "métrica dinámica pluck": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "métrica dinámica spirit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "métrica dinámica nerve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "medida.del_total_visible": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% del Total Visible"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% del total visible": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "% del aggregate visible": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "% del overall visible": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "percentage del total visible": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct del total visible": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ingresos_LY": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ingresos LY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ingresos LY": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.YoY__ingresos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "YoY % Ingresos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "YoY % ingresos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yoy percentage ingreso": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "yoy pct ingreso": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "YoY % IngresosVariación %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.color_YoY_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Color YoY %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color YoY %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color yoy percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "color yoy pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medida.promedio_móvil_3_meses": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Promedio Móvil 3 Meses"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio móvil 3 meses": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Máximo + % para Eje Y Promedio Móvil vs Ingresos en USD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "máximo + % para eje y promedio móvil vs ingresos en USD": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.título_dinámico_por_métrica": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Título Dinámico por Métrica"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "título dinámico por métrica": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ingresos_YoY": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ingresos YoY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ingresos YoY": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "df_has_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "df"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_df"
+			        }
+			      ]
+			    },
+			    "df_has_medida_ingresos_YoY": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "medida.ingresos_YoY": {
+			          "Target": {
+			            "Entity": "medida.ingresos_YoY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "medida.ingresos_YoY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_ingresos_YoY"
+			        }
+			      ]
+			    },
+			    "métrica_has_medida_título_dinámico_por_métrica": {
+			      "Binding": {
+			        "ConceptualEntity": "Métrica"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "métrica": {
+			          "Target": {
+			            "Entity": "métrica"
+			          }
+			        },
+			        "medida.título_dinámico_por_métrica": {
+			          "Target": {
+			            "Entity": "medida.título_dinámico_por_métrica"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "métrica"
+			            },
+			            "Object": {
+			              "Role": "medida.título_dinámico_por_métrica"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "métricas_have_título_dinámico_por_métrica"
+			        }
+			      ]
+			    },
+			    "categoría_has_medida_título_dinámico_por_métrica": {
+			      "Binding": {
+			        "ConceptualEntity": "Categorías"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "categoría": {
+			          "Target": {
+			            "Entity": "categoría"
+			          }
+			        },
+			        "medida.título_dinámico_por_métrica": {
+			          "Target": {
+			            "Entity": "medida.título_dinámico_por_métrica"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "categoría"
+			            },
+			            "Object": {
+			              "Role": "medida.título_dinámico_por_métrica"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "categorías_have_título_dinámico_por_métrica"
+			        }
+			      ]
+			    },
+			    "df_has_medida_máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "medida.máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD": {
+			          "Target": {
+			            "Entity": "medida.máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "medida.máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD"
+			        }
+			      ]
+			    },
+			    "calendario_has_medida_máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "medida.máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD": {
+			          "Target": {
+			            "Entity": "medida.máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "medida.máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_máximo___para_eje_y_promedio_móvil_vs_ingresos_en_USD"
+			        }
+			      ]
+			    },
+			    "df_has_medida_promedio_móvil_3_meses": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "medida.promedio_móvil_3_meses": {
+			          "Target": {
+			            "Entity": "medida.promedio_móvil_3_meses"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "medida.promedio_móvil_3_meses"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_promedio_móvil_3_meses"
+			        }
+			      ]
+			    },
+			    "calendario_has_medida_promedio_móvil_3_meses": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "medida.promedio_móvil_3_meses": {
+			          "Target": {
+			            "Entity": "medida.promedio_móvil_3_meses"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "medida.promedio_móvil_3_meses"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_promedio_móvil_3_meses"
+			        }
+			      ]
+			    },
+			    "df_has_medida_color_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "medida.color_YoY_": {
+			          "Target": {
+			            "Entity": "medida.color_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "medida.color_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_color_YoY_"
+			        }
+			      ]
+			    },
+			    "df_has_medida_YoY__ingresos": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "medida.YoY__ingresos": {
+			          "Target": {
+			            "Entity": "medida.YoY__ingresos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "medida.YoY__ingresos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_YoY__ingresos"
+			        }
+			      ]
+			    },
+			    "df_has_medida_ingresos_LY": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "medida.ingresos_LY": {
+			          "Target": {
+			            "Entity": "medida.ingresos_LY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "medida.ingresos_LY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_ingresos_LY"
+			        }
+			      ]
+			    },
+			    "df_has_medida_del_total_visible": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "medida.del_total_visible": {
+			          "Target": {
+			            "Entity": "medida.del_total_visible"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "medida.del_total_visible"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have__del_total_visible"
+			        }
+			      ]
+			    },
+			    "métrica_has_medida_del_total_visible": {
+			      "Binding": {
+			        "ConceptualEntity": "Métrica"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "métrica": {
+			          "Target": {
+			            "Entity": "métrica"
+			          }
+			        },
+			        "medida.del_total_visible": {
+			          "Target": {
+			            "Entity": "medida.del_total_visible"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "métrica"
+			            },
+			            "Object": {
+			              "Role": "medida.del_total_visible"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "métricas_have__del_total_visible"
+			        }
+			      ]
+			    },
+			    "df_has_medida_métrica_dinámica_valor": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "medida.métrica_dinámica_valor": {
+			          "Target": {
+			            "Entity": "medida.métrica_dinámica_valor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "medida.métrica_dinámica_valor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_métrica_dinámica_valor"
+			        }
+			      ]
+			    },
+			    "métrica_has_medida_métrica_dinámica_valor": {
+			      "Binding": {
+			        "ConceptualEntity": "Métrica"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "métrica": {
+			          "Target": {
+			            "Entity": "métrica"
+			          }
+			        },
+			        "medida.métrica_dinámica_valor": {
+			          "Target": {
+			            "Entity": "medida.métrica_dinámica_valor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "métrica"
+			            },
+			            "Object": {
+			              "Role": "medida.métrica_dinámica_valor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "métricas_have_métrica_dinámica_valor"
+			        }
+			      ]
+			    },
+			    "df_has_categoría_calificación": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.categoría_calificación": {
+			          "Target": {
+			            "Entity": "df.categoría_calificación"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.categoría_calificación"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_categoría_calificacións"
+			        }
+			      ]
+			    },
+			    "métrica_has_métrica": {
+			      "Binding": {
+			        "ConceptualEntity": "Métrica"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "métrica": {
+			          "Target": {
+			            "Entity": "métrica"
+			          }
+			        },
+			        "métrica.métrica": {
+			          "Target": {
+			            "Entity": "métrica.métrica"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "métrica"
+			            },
+			            "Object": {
+			              "Role": "métrica.métrica"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "métricas_have_métricas"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "métrica"
+			            },
+			            "Name": {
+			              "Role": "métrica.métrica"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "métricas_are_names_IDs_of_métricas"
+			        }
+			      ]
+			    },
+			    "categoría_has_categoría": {
+			      "Binding": {
+			        "ConceptualEntity": "Categorías"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "categoría": {
+			          "Target": {
+			            "Entity": "categoría"
+			          }
+			        },
+			        "categoría.categoría": {
+			          "Target": {
+			            "Entity": "categoría.categoría"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "categoría"
+			            },
+			            "Object": {
+			              "Role": "categoría.categoría"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "categorías_have_categorías"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "categoría"
+			            },
+			            "Name": {
+			              "Role": "categoría.categoría"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "categorías_are_names_IDs_of_categorías"
+			        }
+			      ]
+			    },
+			    "df_has_medida_ingresos_promedio": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "medida.ingresos_promedio": {
+			          "Target": {
+			            "Entity": "medida.ingresos_promedio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "medida.ingresos_promedio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_ingresos_promedio"
+			        }
+			      ]
+			    },
+			    "df_has_medida_cantidad_órdenes": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "medida.cantidad_órdenes": {
+			          "Target": {
+			            "Entity": "medida.cantidad_órdenes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "medida.cantidad_órdenes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_cantidad_órdenes"
+			        }
+			      ]
+			    },
+			    "df_has_medida_mapeo_de_colores": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "medida.mapeo_de_colores": {
+			          "Target": {
+			            "Entity": "medida.mapeo_de_colores"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "medida.mapeo_de_colores"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_mapeo_de_colores"
+			        }
+			      ]
+			    },
+			    "df_has_medida_promedio_calificación_de_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "medida.promedio_calificación_de_cliente": {
+			          "Target": {
+			            "Entity": "medida.promedio_calificación_de_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "medida.promedio_calificación_de_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_promedio_calificación_de_cliente"
+			        }
+			      ]
+			    },
+			    "df_has_medida_unidades_vendida": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "medida.unidades_vendida": {
+			          "Target": {
+			            "Entity": "medida.unidades_vendida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "medida.unidades_vendida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_unidades_vendida"
+			        }
+			      ]
+			    },
+			    "df_has_medida_ingresos_en_USD": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "medida.ingresos_en_USD": {
+			          "Target": {
+			            "Entity": "medida.ingresos_en_USD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "medida.ingresos_en_USD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_ingresos_en_USD"
+			        }
+			      ]
+			    },
+			    "calendario_has_día_semana_nro": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.día_semana_nro": {
+			          "Target": {
+			            "Entity": "calendario.día_semana_nro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.día_semana_nro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_día_semana_nros"
+			        }
+			      ]
+			    },
+			    "calendario_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.fecha": {
+			          "Target": {
+			            "Entity": "calendario.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_fechas"
+			        }
+			      ]
+			    },
+			    "calendario_has_día_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.día_semana": {
+			          "Target": {
+			            "Entity": "calendario.día_semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.día_semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_día_semanas"
+			        }
+			      ]
+			    },
+			    "calendario_has_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.día": {
+			          "Target": {
+			            "Entity": "calendario.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_días"
+			        }
+			      ]
+			    },
+			    "calendario_has_nro_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.nro_me": {
+			          "Target": {
+			            "Entity": "calendario.nro_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.nro_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_nro_me"
+			        }
+			      ]
+			    },
+			    "calendario_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.me": {
+			          "Target": {
+			            "Entity": "calendario.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_me"
+			        }
+			      ]
+			    },
+			    "calendario_has_año": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendario": {
+			          "Target": {
+			            "Entity": "calendario"
+			          }
+			        },
+			        "calendario.año": {
+			          "Target": {
+			            "Entity": "calendario.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendario"
+			            },
+			            "Object": {
+			              "Role": "calendario.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendarios_have_años"
+			        }
+			      ]
+			    },
+			    "df_has_calificación_del_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.calificación_del_cliente": {
+			          "Target": {
+			            "Entity": "df.calificación_del_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.calificación_del_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_calificación_del_clientes"
+			        }
+			      ]
+			    },
+			    "df_has_nivel_de_ingresos_del_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.nivel_de_ingresos_del_cliente": {
+			          "Target": {
+			            "Entity": "df.nivel_de_ingresos_del_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.nivel_de_ingresos_del_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_nivel_de_ingresos_del_clientes"
+			        }
+			      ]
+			    },
+			    "df_has_país": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.país": {
+			          "Target": {
+			            "Entity": "df.país"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.país"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_país"
+			        }
+			      ]
+			    },
+			    "df_has_canal_de_venta": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.canal_de_venta": {
+			          "Target": {
+			            "Entity": "df.canal_de_venta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.canal_de_venta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_canal_de_ventas"
+			        }
+			      ]
+			    },
+			    "df_has_método_de_pago": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.método_de_pago": {
+			          "Target": {
+			            "Entity": "df.método_de_pago"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.método_de_pago"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_método_de_pago"
+			        }
+			      ]
+			    },
+			    "df_has_ingresos_en_USD": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.ingresos_en_USD": {
+			          "Target": {
+			            "Entity": "df.ingresos_en_USD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.ingresos_en_USD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_ingresos_en_USD1"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "df.ingresos_en_USD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ingresos_en_USD_indicates_how_expensive_df_are"
+			        }
+			      ]
+			    },
+			    "df_has_unidades_vendida": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.unidades_vendida": {
+			          "Target": {
+			            "Entity": "df.unidades_vendida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.unidades_vendida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_unidades_vendidas"
+			        }
+			      ]
+			    },
+			    "df_has_precio_final_USD": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.precio_final_USD": {
+			          "Target": {
+			            "Entity": "df.precio_final_USD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.precio_final_USD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_precio_final_USD"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "df.precio_final_USD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "precio_final_USD_indicates_how_expensive_df_are"
+			        }
+			      ]
+			    },
+			    "df_has_descuento": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.descuento": {
+			          "Target": {
+			            "Entity": "df.descuento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.descuento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have__descuentos"
+			        }
+			      ]
+			    },
+			    "df_has_precio_base_USD": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.precio_base_USD": {
+			          "Target": {
+			            "Entity": "df.precio_base_USD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.precio_base_USD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_precio_base_USD"
+			        }
+			      ]
+			    },
+			    "df_has_color": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.color": {
+			          "Target": {
+			            "Entity": "df.color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_colors"
+			        }
+			      ]
+			    },
+			    "df_has_talle": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.talle": {
+			          "Target": {
+			            "Entity": "df.talle"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.talle"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_talles"
+			        }
+			      ]
+			    },
+			    "df_has_género": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.género": {
+			          "Target": {
+			            "Entity": "df.género"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.género"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_géneros"
+			        }
+			      ]
+			    },
+			    "df_has_categoría": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.categoría": {
+			          "Target": {
+			            "Entity": "df.categoría"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.categoría"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_categorías"
+			        }
+			      ]
+			    },
+			    "df_has_modelo": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.modelo": {
+			          "Target": {
+			            "Entity": "df.modelo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.modelo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_modelos"
+			        }
+			      ]
+			    },
+			    "df_has_marca": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.marca": {
+			          "Target": {
+			            "Entity": "df.marca"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.marca"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_marcas"
+			        }
+			      ]
+			    },
+			    "df_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.fecha": {
+			          "Target": {
+			            "Entity": "df.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_fechas"
+			        }
+			      ]
+			    },
+			    "df_has_ID_orden": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Dataframe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "df": {
+			          "Target": {
+			            "Entity": "df"
+			          }
+			        },
+			        "df.ID_orden": {
+			          "Target": {
+			            "Entity": "df.ID_orden"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "df"
+			            },
+			            "Object": {
+			              "Role": "df.ID_orden"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "df_have_ID_ordens"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
 		contentType: json
 

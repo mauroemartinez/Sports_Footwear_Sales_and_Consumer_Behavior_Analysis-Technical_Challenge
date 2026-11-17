@@ -162,8 +162,7 @@ table Medidas
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
 	/// Título del gráfico de Overview según la métrica y la categoría elegidas.
-	measure 'Título Dinámico por Métrica' =
-			MAX('Métrica'[Métrica]) & " por " & MAX('Categorías'[Categorías])
+	measure 'Título Dinámico por Métrica' = MAX('Métrica'[Métrica]) & " por " & MAX('Categorías'[Categorías])
 		displayFolder: Cosméticos
 		lineageTag: 8db6061a-5eeb-4d05-8aa7-baa3263fcd72
 

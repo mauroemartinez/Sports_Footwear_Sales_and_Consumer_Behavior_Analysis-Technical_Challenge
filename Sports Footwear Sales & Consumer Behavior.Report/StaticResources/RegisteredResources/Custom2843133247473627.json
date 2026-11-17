@@ -1,1 +1,39 @@
-{"name":"Custom","visualStyles":{"*":{"*":{"border":[{"show":true,"radius":1,"color":{"solid":{"color":"#776ACA"}}}],"background":[{"transparency":0}]}},"page":{"*":{"background":[{"color":{"solid":{"color":"#FFFFFF"}},"transparency":100}]}}}}
+{
+  "name": "Custom",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "border": [
+          {
+            "show": true,
+            "radius": 1,
+            "color": {
+              "solid": {
+                "color": "#776ACA"
+              }
+            }
+          }
+        ],
+        "background": [
+          {
+            "transparency": 0
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 100
+          }
+        ]
+      }
+    }
+  }
+}
