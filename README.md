@@ -2,6 +2,12 @@
 
 A Power BI analysis of sports footwear sales across six countries from 2018 to 2026. The report compares revenue by country, brand, category, and customer segment, tracks year-over-year and monthly trends, and shows how customers rate their purchases. It was built as a technical challenge for a BI Developer / Analytics Engineer role.
 
+<p align="center">
+  <img src="Preview.gif" alt="Sports footwear dashboard walkthrough" width="90%">
+</p>
+
+<p align="center"><a href="docs/Preview.mp4">▶️ Watch the walkthrough in full quality (MP4)</a></p>
+
 ## Dashboard
 
 ![Overview page](Images/overview.png)
@@ -80,6 +86,7 @@ The design uses the GlobalAIze brand palette: navy surfaces, celeste for the mai
 - `scripts/`: dataset download script and its requirements.
 - `docs/documentacion.md`: project documentation (Spanish).
 - `Images/`: report screenshots and model diagram.
+- `Preview.gif`, `docs/Preview.mp4`: dashboard walkthrough (the GIF is embedded above).
 - `LICENSE`: MIT License.
 
 ## Open the report
