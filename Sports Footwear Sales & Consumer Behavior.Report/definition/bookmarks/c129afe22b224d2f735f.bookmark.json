@@ -9,7 +9,8 @@
       "bab97e4903f4d09a4091",
       "8523bd840c2dce8926f0",
       "7a85f3aec9231826cb9b",
-      "ovFlagChart001"
+      "ovFlagChart001",
+      "ovTooltipLayer01"
     ]
   },
   "explorationState": {
@@ -902,6 +903,15 @@
           "ovFlagChart001": {
             "singleVisual": {
               "visualType": "tableEx",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "ovTooltipLayer01": {
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
               "objects": {},
               "display": {
                 "mode": "hidden"

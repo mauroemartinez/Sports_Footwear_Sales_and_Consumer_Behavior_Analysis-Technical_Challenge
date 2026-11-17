@@ -230,6 +230,13 @@ table Medidas
 		dataCategory: ImageUrl
 		lineageTag: 9d4f2a6b-1e8c-4b37-a5d0-7c3e9b2f6a18
 
+	/// Altura fija para la capa invisible que da tooltip al gráfico SVG de Overview: una columna igual por cada país con datos.
+	measure 'Base Tooltip' = IF(NOT ISBLANK([Métrica Dinámica Valor]), 1)
+		formatString: 0
+		isHidden
+		displayFolder: Tooltip
+		lineageTag: 1b7e4c90-3f6a-4d28-9c15-8e2d5a7b3f64
+
 	/// Diferencia de ingresos contra el año anterior, en USD. Vacío cuando no hay año anterior.
 	measure 'Ingresos YoY' = IF(NOT ISBLANK([Ingresos LY]), [Ingresos en USD] - [Ingresos LY])
 		formatString: \$#,0;(\$#,0);\$#,0

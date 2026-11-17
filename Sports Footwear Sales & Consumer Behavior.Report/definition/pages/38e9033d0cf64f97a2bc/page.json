@@ -54,5 +54,12 @@
         }
       }
     ]
-  }
+  },
+  "visualInteractions": [
+    {
+      "source": "ovTooltipLayer01",
+      "target": "ovFlagChart001",
+      "type": "NoFilter"
+    }
+  ]
 }

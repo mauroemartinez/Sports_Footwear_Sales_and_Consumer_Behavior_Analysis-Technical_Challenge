@@ -92,7 +92,10 @@ Esquema estrella con una tabla de hechos a nivel de orden:
 - **Time Intelligence:** variación interanual de ingresos, e ingresos mensuales con el promedio móvil de tres meses.
 - **Mercados:** gráfico de ingresos con la bandera de cada país bajo su barra, y tabla de detalle con una fila por país (ingresos, participación, órdenes, unidades, ingreso por orden y calificación promedio).
   - Los gráficos nativos de Power BI no admiten imágenes en el eje. Por eso este gráfico es un SVG que arma la medida `Gráfico Ingresos por País` y se muestra como imagen en una tabla. Responde a los filtros de la página.
-- **Tooltip País:** página de tooltip oculta, asignada a la tabla de Mercados y al gráfico nativo de Overview. Muestra el nombre del elemento señalado (`Elemento Seleccionado`) y sus métricas, y la bandera (`Bandera Seleccionada`) cuando el elemento es un país.
+- **Tooltip País:** página de tooltip oculta. Muestra el nombre del elemento señalado (`Elemento Seleccionado`) y sus métricas, y la bandera (`Bandera Seleccionada`) cuando el elemento es un país. La usan:
+  - **La tabla de Mercados.**
+  - **El gráfico nativo de Overview.**
+  - **Una capa invisible sobre el gráfico SVG de Overview.** Es un gráfico de columnas nativo, transparente, con una columna de igual altura por país (medida `Base Tooltip`). Está ordenado por la misma métrica que el SVG, para que cada columna quede sobre su país. Sus clics no filtran el SVG, así nunca se desalinea.
 - **Diseño:** usa la paleta de la marca GlobalAIze.
   - **Fondos:** azul marino.
   - **Celeste:** la serie principal y los elementos seleccionados.

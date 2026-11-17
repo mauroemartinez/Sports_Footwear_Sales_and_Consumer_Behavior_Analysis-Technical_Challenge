@@ -10,7 +10,7 @@ A Power BI analysis of sports footwear sales across six countries from 2018 to 2
 
 ![Markets page](Images/markets.png)
 
-Hovering over a country in the Mercados table opens a tooltip with its flag and metrics:
+Hovering over a country, in the Overview chart or in the Mercados table, opens a tooltip with its flag and metrics:
 
 <img src="Images/tooltip.png" alt="Country tooltip with flag" width="420">
 
@@ -64,7 +64,9 @@ The dataset is described by its author as realistic data, but it includes orders
   - **For analysts.** The parameter slicers are hidden by default; show them from the Selection pane (`Métrica` and `Categorías`) to explore any metric by any category.
 - **Time Intelligence.** Year-over-year revenue change, and monthly revenue against the 3-month moving average.
 - **Mercados.** A revenue chart with each country's flag under its bar, and a detail table with one row per country: revenue, share of revenue, orders, units, revenue per order, and average rating.
-- **Country tooltip.** A custom tooltip page shows the hovered item's name and metrics, plus its flag when it is a country. It is used by the Mercados table and the native Overview chart.
+- **Country tooltip.** A custom tooltip page shows the hovered item's name and metrics, plus its flag when it is a country.
+  - **Mercados.** The detail table uses it.
+  - **Overview, country views.** Since the flag chart there is a single image, an invisible native column chart sits on top of it with one column per country, so hovering a bar opens the tooltip.
 
 The design uses the GlobalAIze brand palette: navy surfaces, celeste for the main series and selected states, orange for the second series, and red only for declines. The report is in Spanish. [`docs/documentacion.md`](docs/documentacion.md) covers the assumptions, queries, model, and findings in more detail.
 
