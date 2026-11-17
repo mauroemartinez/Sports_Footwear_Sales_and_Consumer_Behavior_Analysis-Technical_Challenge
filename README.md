@@ -56,7 +56,7 @@ The dataset is described by its author as realistic data, but it includes orders
   - **For analysts.** The parameter slicers are hidden by default; show them from the Selection pane (`Métrica` and `Categorías`) to explore any metric by any category.
 - **Time Intelligence.** Year-over-year revenue change, and monthly revenue against the 3-month moving average.
 
-The report is in Spanish. [`docs/documentacion.md`](docs/documentacion.md) covers the assumptions, queries, model, and findings in more detail.
+The design uses the GlobalAIze brand palette: navy surfaces, celeste for the main series and selected states, orange for the second series, and red only for declines. The report is in Spanish. [`docs/documentacion.md`](docs/documentacion.md) covers the assumptions, queries, model, and findings in more detail.
 
 ## Files
 

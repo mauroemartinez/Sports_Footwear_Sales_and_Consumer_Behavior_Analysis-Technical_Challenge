@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "7de2a97f82d0b61ec84a",
   "position": {
-    "x": 31.565762004175365,
-    "y": 411.85803757828813,
+    "x": 24,
+    "y": 436,
     "z": 1000,
-    "height": 297.62004175365348,
-    "width": 1222.0459290187891,
+    "height": 260,
+    "width": 1232,
     "tabOrder": 1000
   },
   "visual": {
@@ -106,24 +106,10 @@
       "layout": [
         {
           "properties": {
-            "clusteredGapOverlaps": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "clusteredGapOverlapReverse": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "clusteredGapSize": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "30D"
                 }
               }
             }
@@ -172,7 +158,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#776ACA'"
+                      "Value": "'#0DA4CF'"
                     }
                   }
                 }
@@ -187,7 +173,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E3E2F4'"
+                      "Value": "'#E78A45'"
                     }
                   }
                 }
@@ -320,6 +306,47 @@
                   "Value": "true"
                 }
               }
+            },
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            },
+            "showMarker": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TopRight'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -329,44 +356,17 @@
       "title": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tendencia de Ingresos vs. Promedio Móvil a 3 meses'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "padding": [
-        {
-          "properties": {
-            "left": {
-              "expr": {
-                "Literal": {
-                  "Value": "15D"
-                }
-              }
-            },
-            "top": {
-              "expr": {
-                "Literal": {
-                  "Value": "15D"
-                }
-              }
-            },
-            "right": {
-              "expr": {
-                "Literal": {
-                  "Value": "15D"
-                }
-              }
-            },
-            "bottom": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
+                  "Value": "'Ingresos mensuales y promedio móvil de 3 meses'"
                 }
               }
             }
@@ -386,20 +386,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Identificación de Cíclos de Celeridad y Desaceleración de Ingresos'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "'El promedio móvil suaviza la variación de un mes a otro'"
                 }
               }
             }

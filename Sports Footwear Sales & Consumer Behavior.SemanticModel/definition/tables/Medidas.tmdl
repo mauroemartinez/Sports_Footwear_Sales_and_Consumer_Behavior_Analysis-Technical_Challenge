@@ -30,25 +30,26 @@ table Medidas
 			VAR MapeoColor =
 			    SWITCH(
 			        ColorSeleccionado,
-			        "Negro", "#000000",
-			        "Gris", "#B0BEC5",
-			        "Rojo", "#E57373",
-			        "Azul", "#004987",
-			        "Blanco", "#ECEFF1"
+			        "Negro", "#6B7178",
+			        "Gris", "#8D9AA8",
+			        "Rojo", "#EF6661",
+			        "Azul", "#4081D2",
+			        "Blanco", "#F0EEE9"
 			    )
 			VAR MapeoGenero =
 			    SWITCH(
 			        GeneroSeleccionado,
-			        "Masculino", "#003777",
-			        "Femenino", "#BA68C8"
+			        "Masculino", "#0DA4CF",
+			        "Femenino", "#E78A45",
+			        "Unisex", "#8D9AA8"
 			    )
 			VAR MapeoCalificacion =
 			    SWITCH(
 			        CalificacionSeleccionada,
-			        "Muy mala", "#C62828",
-			        "Mala", "#EF9A9A",
-			        "Buena", "#81C784",
-			        "Muy buena", "#2E7D32"
+			        "Muy mala", "#EF6661",
+			        "Mala", "#A5524D",
+			        "Buena", "#247996",
+			        "Muy buena", "#0DA4CF"
 			    )
 			RETURN
 			    SWITCH(
@@ -56,7 +57,7 @@ table Medidas
 			        ISINSCOPE(Fact_Dataframe[Color]) && NOT ISBLANK(MapeoColor), MapeoColor,
 			        ISINSCOPE(Fact_Dataframe[Género]) && NOT ISBLANK(MapeoGenero), MapeoGenero,
 			        ISINSCOPE(Fact_Dataframe[Categoría Calificación]) && NOT ISBLANK(MapeoCalificacion), MapeoCalificacion,
-			        "#776aca"
+			        "#0DA4CF"
 			    )
 		displayFolder: Cosméticos
 		lineageTag: 1ec4f710-a212-4312-b626-ab00cfc9ced0
@@ -122,8 +123,8 @@ table Medidas
 		displayFolder: Time Intelligence
 		lineageTag: c20f1189-e9d6-4746-bbe7-31fc538d824d
 
-	/// Color para formato condicional de la variación interanual: rojo si cae, verde si crece.
-	measure 'Color YoY %' = IF([YoY % Ingresos] < 0, "#FF0000", "#008000")
+	/// Color para formato condicional de la variación interanual: rojo si cae, celeste si crece.
+	measure 'Color YoY %' = IF([YoY % Ingresos] < 0, "#EF6661", "#0DA4CF")
 		displayFolder: Cosméticos
 		lineageTag: 18af7ea2-64f6-4884-a7a5-d48d105d8c7a
 

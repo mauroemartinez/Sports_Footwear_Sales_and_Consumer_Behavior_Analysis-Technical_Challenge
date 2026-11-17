@@ -87,6 +87,13 @@ Esquema estrella con una tabla de hechos a nivel de orden:
   - Los botones de marcadores de la izquierda llevan a ocho vistas predefinidas, como ingresos por país o distribución de calificaciones.
   - Los segmentadores de los parámetros están ocultos para el usuario de negocio. Los analistas pueden mostrarlos desde el panel de selección, con los elementos "Métrica" y "Categorías".
 - **Time Intelligence:** variación interanual de ingresos, e ingresos mensuales con el promedio móvil de tres meses.
+- **Diseño:** usa la paleta de la marca GlobalAIze.
+  - **Fondos:** azul marino.
+  - **Celeste:** la serie principal y los elementos seleccionados.
+  - **Naranja:** la segunda serie.
+  - **Rojo:** solo para caídas.
+  - **Bandas de satisfacción:** van del rojo (Muy mala) al celeste (Muy buena).
+  - **Tema del informe:** todos los colores están en el tema, en `StaticResources/RegisteredResources/`.
 
 ## Hallazgos
 

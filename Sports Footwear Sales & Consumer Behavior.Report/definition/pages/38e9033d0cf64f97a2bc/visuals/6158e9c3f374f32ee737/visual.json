@@ -2,17 +2,28 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "6158e9c3f374f32ee737",
   "position": {
-    "x": 1112.8893622686726,
-    "y": 198.77406470509919,
+    "x": 1094,
+    "y": 262,
     "z": 13000,
-    "height": 51.53401677539609,
-    "width": 141.10504593263215,
+    "height": 34,
+    "width": 150,
     "tabOrder": 12000
   },
   "visual": {
     "visualType": "actionButton",
     "objects": {
       "icon": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
         {
           "properties": {
             "shapeType": {
@@ -27,7 +38,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#776ACA'"
+                      "Value": "'#BBC5D1'"
                     }
                   }
                 }
@@ -51,17 +62,6 @@
           "selector": {
             "id": "default"
           }
-        },
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
         }
       ],
       "text": [
@@ -81,7 +81,25 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Limpiar Filtros'"
+                  "Value": "'Limpiar filtros'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#BBC5D1'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
                 }
               }
             },
@@ -124,7 +142,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#776ACA'"
+                      "Value": "'#2A394D'"
                     }
                   }
                 }
@@ -155,7 +173,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E3E2F4'"
+                      "Value": "'#09182F'"
                     }
                   }
                 }
@@ -164,6 +182,44 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#14243C'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "hover"
+          }
+        }
+      ],
+      "shape": [
+        {
+          "properties": {
+            "tileShape": {
+              "expr": {
+                "Literal": {
+                  "Value": "'rectangleRounded'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "6L"
+                }
+              }
+            }
           }
         }
       ]
@@ -212,6 +268,27 @@
       "padding": [
         {
           "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
             "right": {
               "expr": {
                 "Literal": {
@@ -228,14 +305,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
+                  "Value": "false"
                 }
               }
             }
