@@ -60,6 +60,7 @@ The design uses the GlobalAIze brand palette: navy surfaces, celeste for the mai
 
 ## Files
 
+- `Sports Footwear Sales & Consumer Behavior.pbix`: the report as a single Power BI file, with data loaded.
 - `Sports Footwear Sales & Consumer Behavior.pbip`: Power BI project. It opens the report and semantic model folders next to it.
 - `Sports Footwear Sales & Consumer Behavior.Report/`: report definition.
 - `Sports Footwear Sales & Consumer Behavior.SemanticModel/`: semantic model in TMDL, including the Power Query code and DAX measures.
@@ -71,9 +72,13 @@ The design uses the GlobalAIze brand palette: navy surfaces, celeste for the mai
 
 ## Open the report
 
+To just view the report, open `Sports Footwear Sales & Consumer Behavior.pbix` in Power BI Desktop. It already contains the data.
+
+To work with the project files:
+
 1. Clone or download the repository.
 2. Open `Sports Footwear Sales & Consumer Behavior.pbip` in Power BI Desktop.
-3. Select **Refresh**. The report reads the CSV from this repository on GitHub, so no setup is needed.
+3. Select **Refresh**. The report reads the CSV from this repository on GitHub, so no setup is needed. The first time, Power BI asks how to access raw.githubusercontent.com: choose **Anonymous** and **Connect**.
 
 To work offline, go to **Transform data → Edit parameters** and set `OrigenDatos` to the full path of `Data/global_sports_footwear_sales_2018_2026.csv` on your machine.
 
