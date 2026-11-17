@@ -87,11 +87,12 @@ Esquema estrella con una tabla de hechos a nivel de orden:
 
 - **Overview:** tarjetas de KPI, filtros por año, país, género, marca, nivel de ingresos y canal, y un gráfico de columnas. El gráfico se controla con dos parámetros de campo: `Métrica` (qué medir) y `Categorías` (por qué agrupar).
   - Los botones de marcadores de la izquierda llevan a ocho vistas predefinidas, como ingresos por país o distribución de calificaciones.
+  - Las dos vistas por país ("Ingresos por País" y "Órdenes por País") muestran un gráfico SVG con la bandera bajo cada barra, armado por la medida `Gráfico por País Overview`. Las otras seis usan el gráfico nativo.
   - Los segmentadores de los parámetros están ocultos para el usuario de negocio. Los analistas pueden mostrarlos desde el panel de selección, con los elementos "Métrica" y "Categorías".
 - **Time Intelligence:** variación interanual de ingresos, e ingresos mensuales con el promedio móvil de tres meses.
 - **Mercados:** gráfico de ingresos con la bandera de cada país bajo su barra, y tabla de detalle con una fila por país (ingresos, participación, órdenes, unidades, ingreso por orden y calificación promedio).
   - Los gráficos nativos de Power BI no admiten imágenes en el eje. Por eso este gráfico es un SVG que arma la medida `Gráfico Ingresos por País` y se muestra como imagen en una tabla. Responde a los filtros de la página.
-- **Tooltip País:** página de tooltip oculta, asignada al gráfico de Overview. Muestra el nombre del elemento señalado (`Elemento Seleccionado`) y sus métricas, y la bandera (`Bandera Seleccionada`) cuando el gráfico está agrupado por país.
+- **Tooltip País:** página de tooltip oculta, asignada a la tabla de Mercados y al gráfico nativo de Overview. Muestra el nombre del elemento señalado (`Elemento Seleccionado`) y sus métricas, y la bandera (`Bandera Seleccionada`) cuando el elemento es un país.
 - **Diseño:** usa la paleta de la marca GlobalAIze.
   - **Fondos:** azul marino.
   - **Celeste:** la serie principal y los elementos seleccionados.

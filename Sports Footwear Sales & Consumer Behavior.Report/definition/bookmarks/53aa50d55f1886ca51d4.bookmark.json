@@ -8,7 +8,8 @@
       "7a85f3aec9231826cb9b",
       "8523bd840c2dce8926f0",
       "f156f22d10877b1e3af9",
-      "bab97e4903f4d09a4091"
+      "bab97e4903f4d09a4091",
+      "ovFlagChart001"
     ]
   },
   "explorationState": {
@@ -276,6 +277,9 @@
                     "length": 1
                   }
                 ]
+              },
+              "display": {
+                "mode": "hidden"
               }
             }
           },
@@ -895,6 +899,12 @@
           "6158e9c3f374f32ee737": {
             "singleVisual": {
               "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "ovFlagChart001": {
+            "singleVisual": {
+              "visualType": "tableEx",
               "objects": {}
             }
           }
