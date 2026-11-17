@@ -70,8 +70,8 @@
           "type": "CustomTheme"
         },
         {
-          "name": "icon-ingresos.png",
-          "path": "icon-ingresos.png",
+          "name": "icon-calificacion.png",
+          "path": "icon-calificacion.png",
           "type": "Image"
         },
         {
@@ -80,13 +80,13 @@
           "type": "Image"
         },
         {
-          "name": "icon-ordenes.png",
-          "path": "icon-ordenes.png",
+          "name": "icon-ingresos.png",
+          "path": "icon-ingresos.png",
           "type": "Image"
         },
         {
-          "name": "icon-calificacion.png",
-          "path": "icon-calificacion.png",
+          "name": "icon-ordenes.png",
+          "path": "icon-ordenes.png",
           "type": "Image"
         },
         {

@@ -25,8 +25,8 @@ table Dim_Países
 	/// Bandera del país (imagen SVG incrustada).
 	column Bandera
 		dataType: string
-		dataCategory: ImageUrl
 		lineageTag: 2e9f6b14-7d3a-4c85-a1f0-6b4e8c2d9a57
+		dataCategory: ImageUrl
 		summarizeBy: none
 		sourceColumn: Bandera
 

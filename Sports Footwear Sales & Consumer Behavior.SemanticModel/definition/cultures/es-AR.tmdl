@@ -565,6 +565,16 @@ cultureInfo es-AR
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Ingresos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -580,6 +590,16 @@ cultureInfo es-AR
 			        {
 			          "unidades vendida": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Unidades": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -600,6 +620,16 @@ cultureInfo es-AR
 			        },
 			        {
 			          "Promedio Calificación": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Calificación": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -639,6 +669,16 @@ cultureInfo es-AR
 			          "cantidad órdenes": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Órdenes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -654,6 +694,16 @@ cultureInfo es-AR
 			        {
 			          "ingresos promedio": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Ingreso por orden": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -1568,6 +1618,69 @@ cultureInfo es-AR
 			        {
 			          "ingresos YoY": {
 			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas.ingresos_por_país": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Ingresos por País"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% de ingresos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_países.país": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Países",
+			          "ConceptualProperty": "País"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "País": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_países.bandera": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Países",
+			          "ConceptualProperty": "Bandera"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Bandera": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
