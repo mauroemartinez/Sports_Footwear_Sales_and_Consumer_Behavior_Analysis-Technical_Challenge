@@ -32,6 +32,18 @@ table Dim_Países
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Bandera en base64, para incrustarla dentro del gráfico SVG de la página Mercados.
+	column 'Bandera Base64'
+		dataType: string
+		isHidden
+		lineageTag: 8b2c5e71-4a9d-4f06-b3e8-1d7a6c9f2e48
+		summarizeBy: none
+		sourceColumn: Bandera Base64
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Dim_Países = m
 		mode: import
 		queryGroup: Dimensiones
@@ -39,7 +51,7 @@ table Dim_Países
 				let
 				    Paises = fnCrearDimension(Ventas_Origen, "País", "Índice País"),
 				    ConBandera = Table.NestedJoin(Paises, {"País"}, Banderas, {"País"}, "Banderas", JoinKind.LeftOuter),
-				    BanderaExpandida = Table.ExpandTableColumn(ConBandera, "Banderas", {"Bandera"})
+				    BanderaExpandida = Table.ExpandTableColumn(ConBandera, "Banderas", {"Bandera", "Bandera Base64"})
 				in
 				    BanderaExpandida
 

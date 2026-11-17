@@ -3,9 +3,9 @@
   "name": "mkTableMercados01",
   "position": {
     "x": 24,
-    "y": 280,
+    "y": 408,
     "z": 5000,
-    "height": 416,
+    "height": 288,
     "width": 1232,
     "tabOrder": 100
   },
@@ -189,14 +189,21 @@
             "rowPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "5D"
+                  "Value": "3D"
                 }
               }
             },
             "imageHeight": {
               "expr": {
                 "Literal": {
-                  "Value": "24D"
+                  "Value": "20D"
+                }
+              }
+            },
+            "imageWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
                 }
               }
             },
@@ -214,7 +221,7 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "11D"
                 }
               }
             }
@@ -502,27 +509,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Desempeño por mercado'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "subTitle": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Ingresos, volumen y satisfacción por país · ordenado por ingresos'"
+                  "Value": "'Detalle por mercado'"
                 }
               }
             }

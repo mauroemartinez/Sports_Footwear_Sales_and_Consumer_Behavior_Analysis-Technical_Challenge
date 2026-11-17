@@ -181,6 +181,83 @@ table Medidas
 		displayFolder: Métricas Base
 		lineageTag: 5d8a3f62-9c1e-4b07-8e2a-4f6c1d9b7e30
 
+	/// Bandera del país señalado en el gráfico de Overview, para la página de tooltip. Vacía si el gráfico no está agrupado por país.
+	measure 'Bandera Seleccionada' =
+			IF(
+			    MAX('Categorías'[Categorías]) = "País" && HASONEVALUE('Dim_Países'[País]),
+			    SELECTEDVALUE('Dim_Países'[Bandera])
+			)
+		displayFolder: Tooltip
+		lineageTag: 0f6e2d8a-5b1c-4e97-a3f4-9c2b7d1e6a85
+		dataCategory: ImageUrl
+
+	/// Nombre del elemento señalado en el gráfico de Overview, según la categoría elegida en el parámetro.
+	measure 'Elemento Seleccionado' =
+			SWITCH(
+			    MAX('Categorías'[Categorías]),
+			    "Canal de Venta", SELECTEDVALUE('Canales de Venta'[Canal de Venta]),
+			    "Categoría", SELECTEDVALUE('Dim_Categoría'[Categoría]),
+			    "Color", SELECTEDVALUE(Fact_Dataframe[Color]),
+			    "Calificación del Cliente", "Calificación " & FORMAT(SELECTEDVALUE(Fact_Dataframe[Calificación del Cliente]), "0.0"),
+			    "Categoría de Clasificación", SELECTEDVALUE(Fact_Dataframe[Categoría Calificación]),
+			    "Género", SELECTEDVALUE(Fact_Dataframe[Género]),
+			    "Marca", SELECTEDVALUE('Dim_Marcas'[Marca]),
+			    "Método de Pago", SELECTEDVALUE('Dim_Métodos de Pago'[Método de Pago]),
+			    "Nivel de Ingresos del Cliente", "Ingresos " & SELECTEDVALUE(Fact_Dataframe[Nivel de Ingresos del Cliente]),
+			    "Modelo", "Modelo " & SELECTEDVALUE(Fact_Dataframe[Modelo]),
+			    "País", SELECTEDVALUE('Dim_Países'[País]),
+			    "Talle", "Talle " & SELECTEDVALUE(Fact_Dataframe[Talle])
+			)
+		displayFolder: Tooltip
+		lineageTag: 3a9c7e15-2d4b-4f80-96e1-5b8d2c7f0a36
+
+	/// Gráfico de columnas en SVG con los ingresos por país y la bandera de cada país bajo su barra. Respeta los filtros.
+	measure 'Gráfico Ingresos por País' =
+			VAR Datos =
+			    FILTER(
+			        ADDCOLUMNS(
+			            VALUES('Dim_Países'[País]),
+			            "@Valor", [Ingresos en USD],
+			            "@Bandera", CALCULATE(MAX('Dim_Países'[Bandera Base64]))
+			        ),
+			        NOT ISBLANK([@Valor])
+			    )
+			VAR Cantidad = COUNTROWS(Datos)
+			VAR Maximo = MAXX(Datos, [@Valor])
+			VAR Ancho = 1180
+			VAR Base = 112
+			VAR AltoMaximo = 82
+			VAR Espacio = DIVIDE(Ancho, Cantidad)
+			VAR AnchoBarra = MIN(Espacio * 0.5, 120)
+			VAR Barras =
+			    CONCATENATEX(
+			        ADDCOLUMNS(Datos, "@Posicion", RANKX(Datos, [@Valor], , DESC, Dense)),
+			        VAR Centro = Espacio * ([@Posicion] - 1) + Espacio / 2
+			        VAR Alto = AltoMaximo * DIVIDE([@Valor], Maximo)
+			        RETURN
+			            "<rect x='" & FORMAT(Centro - AnchoBarra / 2, "0.0", "en-US") & "' y='" & FORMAT(Base - Alto, "0.0", "en-US")
+			                & "' width='" & FORMAT(AnchoBarra, "0.0", "en-US") & "' height='" & FORMAT(Alto, "0.0", "en-US")
+			                & "' rx='4' fill='%230DA4CF'/>"
+			            & "<text x='" & FORMAT(Centro, "0.0", "en-US") & "' y='" & FORMAT(Base - Alto - 8, "0.0", "en-US")
+			                & "' text-anchor='middle' font-family='Segoe UI' font-size='14' fill='%23F0EEE9'>$"
+			                & FORMAT([@Valor] / 1000000, "0.00", "es-AR") & "M</text>"
+			            & "<image xlink:href='" & [@Bandera] & "' x='" & FORMAT(Centro - 18, "0.0", "en-US") & "' y='" & (Base + 10)
+			                & "' width='36' height='24' preserveAspectRatio='none'/>"
+			            & "<text x='" & FORMAT(Centro, "0.0", "en-US") & "' y='" & (Base + 54)
+			                & "' text-anchor='middle' font-family='Segoe UI' font-size='13' fill='%23BBC5D1'>" & 'Dim_Países'[País] & "</text>",
+			        "",
+			        [@Posicion], ASC
+			    )
+			RETURN
+			    IF(
+			        Cantidad > 0,
+			        "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1180' height='175' viewBox='0 0 1180 175'>"
+			            & "<line x1='0' y1='" & Base & "' x2='1180' y2='" & Base & "' stroke='%232A394D'/>" & Barras & "</svg>"
+			    )
+		displayFolder: Cosméticos
+		lineageTag: 6e1b9d47-8c3a-4f25-b0d6-2a7e4c9f1b53
+		dataCategory: ImageUrl
+
 	partition Medidas = m
 		mode: import
 		queryGroup: Medidas

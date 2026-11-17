@@ -10,6 +10,10 @@ A Power BI analysis of sports footwear sales across six countries from 2018 to 2
 
 ![Markets page](Images/markets.png)
 
+Hovering over a country in the Overview chart opens a tooltip with its flag and metrics:
+
+<img src="Images/tooltip.png" alt="Country tooltip with flag" width="420">
+
 ## Key findings
 
 The dataset has 30,000 orders, 75,006 units, and USD 9.08M in revenue, an average of USD 302.71 per order.
@@ -35,6 +39,7 @@ The dataset is described by its author as realistic data, but it includes orders
 - **Locale-independent parsing.** Types are set with the `en-US` culture, so decimal points are read correctly on any regional setting.
 - **Shared dimension function.** A reusable function, `fnCrearDimension`, builds each dimension with a surrogate key.
 - **Country flags.** A `Banderas` query holds each country's flag as an embedded SVG image, so the report shows them without any external files.
+- **Chart drawn in DAX.** Native Power BI charts can't show images on the axis, so the flag chart on Mercados is an SVG built by the `Gráfico Ingresos por País` measure. It responds to the page filters like any other visual.
 - **Query groups.** Queries are grouped into Parameters, Functions, Transformation, Dimensions, Fact, and Measures.
 
 **Model.** A star schema with one order-level fact table:
@@ -58,7 +63,8 @@ The dataset is described by its author as realistic data, but it includes orders
   - **For business users.** Eight bookmark buttons open predefined views, such as revenue by country or rating distribution.
   - **For analysts.** The parameter slicers are hidden by default; show them from the Selection pane (`Métrica` and `Categorías`) to explore any metric by any category.
 - **Time Intelligence.** Year-over-year revenue change, and monthly revenue against the 3-month moving average.
-- **Mercados.** One row per country with its flag: revenue, share of revenue, orders, units, revenue per order, and average rating.
+- **Mercados.** A revenue chart with each country's flag under its bar, and a detail table with one row per country: revenue, share of revenue, orders, units, revenue per order, and average rating.
+- **Country tooltip.** Hovering over a bar in the Overview chart shows a custom tooltip page with the item's name and metrics, plus the flag when the chart is grouped by country.
 
 The design uses the GlobalAIze brand palette: navy surfaces, celeste for the main series and selected states, orange for the second series, and red only for declines. The report is in Spanish. [`docs/documentacion.md`](docs/documentacion.md) covers the assumptions, queries, model, and findings in more detail.
 
