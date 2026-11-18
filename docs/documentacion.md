@@ -1,4 +1,4 @@
-# Sports Footwear Sales & Consumer Behavior — Documentación
+# Sports Footwear Sales & Consumer Behavior: Documentación
 
 Informe de Power BI que analiza ventas, precios y satisfacción de clientes de calzado deportivo en seis países entre 2018 y 2026.
 
@@ -62,8 +62,8 @@ Esquema estrella con una tabla de hechos a nivel de orden:
 | `Dim_Métodos de Pago` | Dimensión | 4 | `Índice Métodos de Pago` |
 | `Dim_Países` | Dimensión | 6 | `Índice País` |
 | `Calendario` | Fechas (DAX) | 3.287 | `Fecha` |
-| `Medidas` | Medidas | — | — |
-| `Métrica`, `Categorías` | Parámetros de campo | 5 y 12 | — |
+| `Medidas` | Medidas | - | - |
+| `Métrica`, `Categorías` | Parámetros de campo | 5 y 12 | - |
 
 - **Relaciones:** todas son de muchos a uno, desde `Fact_Dataframe` hacia cada dimensión, con filtro en una sola dirección.
 - **Calendario:** se crea con `CALENDAR()` desde el 1 de enero del primer año con ventas hasta el 31 de diciembre del último. Así cubre años completos para las comparaciones interanuales. Se usa en lugar de `CALENDARAUTO()` para controlar el rango, y la fecha/hora automática está desactivada.
