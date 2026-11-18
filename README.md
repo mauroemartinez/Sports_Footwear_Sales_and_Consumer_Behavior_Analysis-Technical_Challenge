@@ -1,6 +1,10 @@
 # Sports Footwear Sales and Consumer Behavior Analysis
+<p>
+  <a href="README.md"><img src="https://raw.githubusercontent.com/mauroemartinez/mauroemartinez/main/assets/lang/en-active.svg" alt="English" height="30"></a>
+  <a href="README.es.md"><img src="https://raw.githubusercontent.com/mauroemartinez/mauroemartinez/main/assets/lang/es.svg" alt="Leer en español" height="30"></a>
+</p>
 
-A Power BI analysis of sports footwear sales across six countries from 2018 to 2026. The report compares revenue by country, brand, category, and customer segment, tracks year-over-year and monthly trends, and shows how customers rate their purchases. It was built as a technical challenge for a BI Developer / Analytics Engineer role.
+A Power BI analysis of sports footwear sales across six countries from 2018 to 2026. The report compares revenue by country, brand, category, and customer segment, tracks year-over-year and monthly trends, and shows how customers rate their purchases.
 
 <p align="center">
   <img src="Preview.gif" alt="Sports footwear dashboard walkthrough" width="90%">
